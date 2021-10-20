@@ -1,0 +1,59 @@
+@import "../../global.scss";
+
+header {
+  background-color: $mainColor;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+
+  .logo {
+    object-fit: fill;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+
+    .icon {
+      font-size: 3rem;
+    }
+  }
+  .leftContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // flex: 1;
+    // background-color: red;
+    width: 60%;
+
+    .itemContainer {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .rightContainer {
+    width: 100px;
+    height: 100%;
+    // background-color: #fff;
+    display: flex;
+
+    justify-content: center;
+
+    .burgerNav {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      span {
+        height: 5px;
+        width: 40px;
+        margin: 2px;
+        background-color: white;
+      }
+    }
+  }
+}
