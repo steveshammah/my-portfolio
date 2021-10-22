@@ -8,11 +8,9 @@
   align-items: center;
 
   > div {
-    // background-color: aqua;
     border: 1px solid $mainColor;
     height: 90%;
     margin: 10px;
-    // width: 45%;
   }
 
   .leftContainer {
@@ -25,13 +23,12 @@
     color: rgb(87, 87, 87);
 
     img {
-      height: 250px;
-      width: 250px;
+      height: 200px;
+      width: 200px;
       border-radius: 50%;
-      background-color: $mainColor;
+      object-fit: cover;
     }
     .introText {
-      // background-color: $mainColor;
       width: 250px;
       line-height: 25px;
       padding: 2px;
@@ -48,7 +45,6 @@
         align-items: center;
         justify-content: space-between;
         height: 30px;
-        // width: 80%;
       }
     }
     .social {
@@ -88,6 +84,28 @@
   }
 
   .rightContainer {
+    padding-top: 50px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      width: 80%;
+      flex: 1;
+      line-height: 35px;
+      letter-spacing: 2px;
+    }
+
+    .icon {
+      font-size: 4rem;
+      color: $mainColor;
+      cursor: pointer;
+    }
   }
 }

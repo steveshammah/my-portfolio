@@ -3,35 +3,54 @@
 .menu {
   background-color: $mainColor;
   z-index: 1;
+  position: sticky;
+  top: 70px;
 }
 .menuActive {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  position: relative;
   width: 100%;
   list-style: none;
   animation: slideIn 0.5s forwards;
+  background-color: $mainColor;
+
 }
 li {
-  color: white;
+  color: #f3f3fb;
+  font-weight: 500;
   font-size: 1.6rem;
   cursor: pointer;
   text-transform: uppercase;
 }
 
 .menuInactive {
-  display: none;
+  animation: slideOut 0.5s forwards;
+  > * {
+    display: none;
+  }
 }
 
 @keyframes slideIn {
   from {
-    top: 0px;
+    top: 30px;
     height: 0vh;
   }
   to {
     top: 0px;
     height: 40vh;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    top: 0px;
+    height: 40vh;
+  }
+  to {
+    top: 30px;
+    height: 0vh;
+    display: none;
   }
 }
