@@ -21,7 +21,6 @@ function App() {
     <Intro />
     <Portfolio />
     <Contact />
-      <h2>Welcome!</h2>
       </div>
     </div>
   );
