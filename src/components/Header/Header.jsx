@@ -2,7 +2,7 @@ import "./Header.scss";
 
 import { Person, Mail, Phone, ComputerTwoTone } from "@material-ui/icons";
 
-export const Header = () => {
+export const Header = ({ menuActive, setMenuActive, onClick }) => {
   return (
     <header>
       <div className='logo'>
@@ -23,7 +23,7 @@ export const Header = () => {
         </div>
       </div>
       <div className='rightContainer'>
-        <div className='burgerNav'>
+        <div className='burgerNav' onClick={onClick}>
           <span></span>
           <span></span>
           <span></span>

@@ -1,0 +1,37 @@
+@import "../../global.scss";
+
+.menu {
+  background-color: $mainColor;
+  z-index: 1;
+}
+.menuActive {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+  list-style: none;
+  animation: slideIn 0.5s forwards;
+}
+li {
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.menuInactive {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    top: 0px;
+    height: 0vh;
+  }
+  to {
+    top: 0px;
+    height: 40vh;
+  }
+}
