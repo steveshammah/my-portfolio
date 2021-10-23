@@ -6,7 +6,6 @@ import {
   Instagram,
   ArrowDropDown,
   CloudDownload,
-  // DeleteIcon,
 } from "@material-ui/icons";
 
 export const Intro = () => {
@@ -31,15 +30,34 @@ export const Intro = () => {
             </span>
 
             <div className='social'>
-              <GitHub className='icon' /> | <Instagram className='icon' /> |{" "}
-              <Twitter className='icon' />
+              <a
+                href={`https://github.com/Shammah08`}
+                target='_blank'
+                rel='noreferrer'>
+                <GitHub className='icon' />{" "}
+              </a>{" "}
+              |{" "}
+              <a
+                href={`https://instagram.com/steveshammah`}
+                target='_blank'
+                rel='noreferrer'>
+                {" "}
+                <Instagram className='icon' />{" "}
+              </a>{" "}
+              |
+              <a
+                href={`https://twitter.com/steveshammah_`}
+                target='_blank'
+                rel='noreferrer'>
+                <Twitter className='icon' />
+              </a>
             </div>
           </div>
           <div className='nav-button'>
             <a href='#contact'>
               <button>Contact Me</button>
             </a>
-            <a href=''>
+            <a href='#contact'>
               <button className='cv-download'>
                 Download CV <CloudDownload className='icon' />
               </button>

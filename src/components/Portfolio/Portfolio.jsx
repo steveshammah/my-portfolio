@@ -19,7 +19,6 @@ export const Portfolio = () => {
       git: "my-portfolio",
       url: "steveshammah.netlify.app",
     },
-    ,
     {
       name: "The Farm",
       stack: ["HTML", "CSS", "Python", "Flask", "JavaScript", "MySQL"],
@@ -53,12 +52,16 @@ export const Portfolio = () => {
               </span>
 
               <span>
-                <a href={`https://${project.url}`} target='_blank'>
+                <a
+                  href={`https://${project.url}`}
+                  target='_blank'
+                  rel='noreferrer'>
                   <Public className='icon' />
                 </a>
                 <a
                   href={`https://github.com/Shammah08/${project.git}`}
-                  target='_blank'>
+                  target='_blank'
+                  rel='noreferrer'>
                   <GitHub className='icon' />
                 </a>
               </span>
