@@ -1,7 +1,5 @@
 import "./Contact.scss";
 import {
-  AlternateEmailOutlined,
-  EmailSharp,
   EmailTwoTone,
   FlagTwoTone,
   Home,

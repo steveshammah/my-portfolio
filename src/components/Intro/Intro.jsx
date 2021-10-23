@@ -4,8 +4,9 @@ import {
   Twitter,
   GitHub,
   Instagram,
-  ArrowDownward,
   ArrowDropDown,
+  CloudDownload,
+  // DeleteIcon,
 } from "@material-ui/icons";
 
 export const Intro = () => {
@@ -38,6 +39,11 @@ export const Intro = () => {
             <a href='#contact'>
               <button>Contact Me</button>
             </a>
+            <a href=''>
+              <button className='cv-download'>
+                Download CV <CloudDownload className='icon' />
+              </button>
+            </a>{" "}
           </div>
         </div>
       </div>
@@ -56,20 +62,12 @@ export const Intro = () => {
           vitae deserunt molestiae, magni natus sequi delectus incidunt
           perferendis repudiandae dolorem maxime atque, enim aperiam totam eos.
           Veritatis possimus maiores perspiciatis reprehenderit tenetur
-          voluptatem? Modi, exercitationem asperiores amet dolores iusto ipsum
-          ipsa fugit obcaecati quisquam animi quia explicabo aliquam quam
-          provident commodi voluptatum corrupti laudantium! Alias quos hic sit
-          rem laudantium illo! Nesciunt, pariatur, ut fugit maiores vel maxime
-          magni explicabo sed accusamus officia at, quia odit aliquid dolorem
-          veritatis assumenda. Fuga, est cum sequi libero nihil accusantium
-          iusto quasi enim, atque ad quas? Impedit expedita iste blanditiis
-          neque, omnis velit. Reiciendis optio beatae alias quidem quas unde
-          placeat quisquam aliquam laboriosam corrupti fugiat, molestias animi,
-          dolor id mollitia inventore ipsam nulla. Iusto fuga doloremque
-          cupiditate ab quis ad.
+          voluptatem?
         </p>
 
-        <ArrowDropDown className='icon' />
+        <a href='#portfolio'>
+          <ArrowDropDown className='icon' />
+        </a>
       </div>
     </div>
   );
