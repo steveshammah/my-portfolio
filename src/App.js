@@ -9,19 +9,15 @@ import {Contact} from './components/Contact/Contact';
 
 function App() {
   const [menuActive, setMenuActive] = useState(false)
-  console.log(menuActive, 'Menu Active')
-
-  const handleMenuClick = () => {
-    setMenuActive(!menuActive)
-  }
+ 
   return (
     <div className='app' id='home'>
-    <Header menuActive={ menuActive} setMenuActive={setMenuActive} onClick={handleMenuClick}/>
+    <Header menuActive={ menuActive} setMenuActive={setMenuActive} />
     <Menu menuActive={ menuActive} setMenuActive={setMenuActive}/>
-    <Intro />
-    <Portfolio/>
-    <Experience/>
-    <Contact />
+    <Intro menuActive={ menuActive} setMenuActive={setMenuActive}/>
+    <Portfolio menuActive={ menuActive} setMenuActive={setMenuActive}/>
+    <Experience menuActive={ menuActive} setMenuActive={setMenuActive}/>
+    <Contact menuActive={ menuActive} setMenuActive={setMenuActive}/>
     </div>
   );
 }

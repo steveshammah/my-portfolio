@@ -36,7 +36,6 @@ export const Experience = () => {
         "Examined claims forms and other records to determine insurance coverage and validity.",
         "Reviewed and analyzed suspicious and potentially fraudulent insurance claims and flagged it to the relevant authorities",
         "Loaded member claims and invoices to the system for assesment by adjudicators and further payment or decline by finance department. ",
-        "Networking: Local Area Network setup and routing",
       ],
     },
     {
@@ -47,6 +46,7 @@ export const Experience = () => {
       desc: [
         " Gained experience with computer diagnostics of both hardware and software.",
         " Computers, laptops and other peripheral hardware repairs",
+        "Networking: Setting up of Local Area Network and routing configuration",
       ],
     },
     {
@@ -55,7 +55,7 @@ export const Experience = () => {
       leaveDate: 2015,
       role: "Telemarketer",
       desc: [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorum voluptatum magni eligendi deserunt unde accusamus, similique illum magnam itaque.",
+        "Contacted potential clients and enlighted them on the companies products in efforts to get the clients to purchase and make the sale.",
       ],
     },
   ];

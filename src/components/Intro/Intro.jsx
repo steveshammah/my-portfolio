@@ -5,30 +5,54 @@ import {
   GitHub,
   Instagram,
   ArrowDropDown,
-  CloudDownload,
+  GetApp,
+  Star,
 } from "@material-ui/icons";
+import { useEffect, useRef } from "react";
+import { init } from "ityped";
 
 export const Intro = () => {
+  const textRef = useRef();
+  useEffect(() => {
+    init(textRef.current, {
+      showCursor: false,
+      backDelay: 1500,
+      strings: [
+        "Steve Shammah",
+        // "Well...",
+        "I am a web developer!",
+        "I enjoy building stuff.",
+        // "P.S: I am an athlete also...",
+        // "A rugby player to be precise.",
+      ],
+      backSpeed: 60,
+      startDelay: 500,
+    });
+    return () => {};
+  }, []);
+
+  const age = new Date().getFullYear() - 1996;
+
   return (
     <div className='introContainer'>
+      <div className='backgroundContainer'></div>
       <div className='leftContainer'>
         <div className='image'>
           <img src={avatar} alt='AVATAR' />
           <div className='introText'>
-            <h3>Steve Shammah Odhiambo.</h3>
-            <h4>Web Developer</h4>
+            <h2 ref={textRef}></h2>
+          </div>
+          <div className='nav-button'>
+            <a href='#contact'>
+              <button>Contact Me</button>
+            </a>
+            <a href='#contact' title='Feature Unavailable'>
+              <button className='cv-download'>
+                Download CV <GetApp className='icon' />
+              </button>
+            </a>{" "}
           </div>
           <div className='personalText'>
-            <span>
-              <h4>Residence:</h4> <h5>Kenya</h5>
-            </span>
-            <span>
-              <h4>City:</h4> <h5>Nairobi</h5>
-            </span>
-            <span>
-              <h4>Age:</h4> <h5>25</h5>
-            </span>
-
             <div className='social'>
               <a
                 href={`https://github.com/Shammah08`}
@@ -53,35 +77,33 @@ export const Intro = () => {
               </a>
             </div>
           </div>
-          <div className='nav-button'>
-            <a href='#contact'>
-              <button>Contact Me</button>
-            </a>
-            <a href='#contact' title='Still working on this'>
-              <button className='cv-download'>
-                Download CV <CloudDownload className='icon' />
-              </button>
-            </a>{" "}
-          </div>
         </div>
       </div>
       <div className='rightContainer'>
-        <h2>Information</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ut
-          magni accusamus sequi. Voluptatem deleniti perferendis enim quos,
-          libero impedit. Nostrum quis nobis facere mollitia labore reiciendis
-          eius voluptas excepturi! Labore quasi magnam fuga doloremque esse
-          reprehenderit. Ducimus deleniti optio quod, sit provident dolore
-          neque, qui quisquam, doloremque incidunt nesciunt deserunt quos? Rerum
-          eligendi, iusto reiciendis alias eveniet vitae, reprehenderit voluptas
-          expedita dolore nostrum fugiat incidunt dolores recusandae illo nisi
-          minima nobis omnis atque quia iste? Quos voluptatem odit quis non
-          vitae deserunt molestiae, magni natus sequi delectus incidunt
-          perferendis repudiandae dolorem maxime atque, enim aperiam totam eos.
-          Veritatis possimus maiores perspiciatis reprehenderit tenetur
-          voluptatem?
-        </p>
+        {/* <h2 ref={textRef}></h2> */}
+        <div className='container'>
+          <div className='meta-data'>
+            <h3>Personal Details</h3>
+            <span>
+              <h5>Residence:</h5> <h5>Kenya</h5>
+            </span>
+            <span>
+              <h5>City:</h5> <h5>Nairobi</h5>
+            </span>
+            <span>
+              <h5>Age:</h5> <h5>{age}</h5>
+            </span>
+          </div>
+          <p>
+            I am a web developer with knowledge and practice in designing and
+            building application with some of the up to date technologies.{" "}
+            <br /> Key technologies include: <br /> <Star className='icon' />{" "}
+            Languages: JavaScript, Python, SQL <br /> <Star className='icon' />{" "}
+            Database systems: MYSQL <br />
+            <Star className='icon' /> Frameworks & Libraries: React JS, Flask,
+            JQuery <br /> <Star className='icon' /> Others: Html, CSS, Sass.
+          </p>
+        </div>
 
         <a href='#portfolio'>
           <ArrowDropDown className='icon' />

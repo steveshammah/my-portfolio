@@ -3,7 +3,7 @@ import "./Header.media.scss";
 
 import { Person, Mail, Phone, ComputerTwoTone } from "@material-ui/icons";
 
-export const Header = ({ menuActive, setMenuActive, onClick }) => {
+export const Header = ({ menuActive, setMenuActive }) => {
   return (
     <header className={menuActive ? "activeHeader" : ""}>
       <div className='logo'>
@@ -26,7 +26,7 @@ export const Header = ({ menuActive, setMenuActive, onClick }) => {
         </div>
       </div>
       <div className='rightContainer'>
-        <div className='burgerNav' onClick={onClick}>
+        <div className='burgerNav' onClick={() => setMenuActive(!menuActive)}>
           <span></span>
           <span></span>
           <span></span>

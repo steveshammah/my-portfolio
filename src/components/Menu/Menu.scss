@@ -15,10 +15,9 @@
   list-style: none;
   animation: slideIn 0.5s forwards;
   background-color: $mainColor;
-
 }
 li {
-  color: #f3f3fb;
+  color: $mainTextColor;
   font-weight: 500;
   font-size: 1.6rem;
   cursor: pointer;

@@ -1,7 +1,7 @@
 import "./Menu.scss";
 
 export const Menu = ({ menuActive, setMenuActive }) => {
-  const links = ["home", "portfolio", "experience", "contact", "more"];
+  const links = ["home", "portfolio", "experience", "contact"];
   return (
     <div className='menu'>
       <ul className={menuActive ? "menuActive" : "menuInactive"}>

@@ -1,16 +1,22 @@
-// $mainColor: #242425;
 $mainColor: #141d2e;
-$secondaryColor: #6494fb;
+$secondaryColor: #ffffff;
+$tertiaryColor: #6494fb;
+$mainTextColor: #dad8d8;
+$secondaryTextColor: #242425;
+$backgroundColor: #ebf2f9;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  scroll-snap-type: start;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+html {
+  background-color: $backgroundColor;
 }
