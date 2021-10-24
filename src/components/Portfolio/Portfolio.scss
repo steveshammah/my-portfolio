@@ -1,13 +1,14 @@
 .portfolioContainer {
   background-color: #ebf2f9;
   // background-color: red;
-  padding-top: 20px;
+  // padding-top: 20px;
   height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   h2 {
     font-size: 2rem;
+    margin-bottom: 40px;
   }
 
   .projectsContainer {

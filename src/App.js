@@ -4,6 +4,7 @@ import {Header} from './components/Header/Header';
 import {Menu} from './components/Menu/Menu';
 import {Intro} from './components/Intro/Intro';
 import {Portfolio} from './components/Portfolio/Portfolio';
+import {Experience} from './components/Experience/Experience';
 import {Contact} from './components/Contact/Contact';
 
 function App() {
@@ -14,14 +15,13 @@ function App() {
     setMenuActive(!menuActive)
   }
   return (
-    <div className='app'>
+    <div className='app' id='home'>
     <Header menuActive={ menuActive} setMenuActive={setMenuActive} onClick={handleMenuClick}/>
-    <Menu menuActive={ menuActive}/>
-    <div className='sections'>
+    <Menu menuActive={ menuActive} setMenuActive={setMenuActive}/>
     <Intro />
-    <Portfolio />
+    <Portfolio/>
+    <Experience/>
     <Contact />
-      </div>
     </div>
   );
 }

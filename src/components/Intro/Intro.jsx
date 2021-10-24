@@ -57,7 +57,7 @@ export const Intro = () => {
             <a href='#contact'>
               <button>Contact Me</button>
             </a>
-            <a href='#contact'>
+            <a href='#contact' title='Still working on this'>
               <button className='cv-download'>
                 Download CV <CloudDownload className='icon' />
               </button>

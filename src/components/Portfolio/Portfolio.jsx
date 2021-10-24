@@ -9,7 +9,7 @@ export const Portfolio = () => {
       image: "",
       description: "An application model of an agency. ",
       git: "thegoodapp",
-      url: "thecomapanyke.netlify.app",
+      url: "thecompanyke.netlify.app",
     },
     {
       name: "My Portfolio",
@@ -37,8 +37,8 @@ export const Portfolio = () => {
     },
   ];
   return (
-    <div className='portfolioContainer' id='portfolio'>
-      <h2>Portfolio</h2>
+    <div className='portfolioContainer'>
+      <h2 id='portfolio'>Portfolio</h2>
       <div className='projectsContainer'>
         {projects.map((project) => {
           return (

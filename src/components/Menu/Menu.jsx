@@ -1,13 +1,15 @@
 import "./Menu.scss";
 
-export const Menu = ({ menuActive }) => {
+export const Menu = ({ menuActive, setMenuActive }) => {
+  const links = ["home", "portfolio", "experience", "contact", "more"];
   return (
     <div className='menu'>
       <ul className={menuActive ? "menuActive" : "menuInactive"}>
-        <li>Home</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
-        <li>More</li>
+        {links.map((link) => (
+          <li onClick={() => setMenuActive(!menuActive)}>
+            <a href={`#${link}`}>{link}</a>
+          </li>
+        ))}
       </ul>
     </div>
   );

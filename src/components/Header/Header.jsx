@@ -7,7 +7,9 @@ export const Header = ({ menuActive, setMenuActive, onClick }) => {
   return (
     <header className={menuActive ? "activeHeader" : ""}>
       <div className='logo'>
-        <ComputerTwoTone className='icon' />
+        <a href='#home'>
+          <ComputerTwoTone className='icon' />
+        </a>
       </div>
       <div className='leftContainer'>
         <div className='itemContainer'>
