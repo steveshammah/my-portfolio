@@ -18,12 +18,12 @@ export const Intro = () => {
       showCursor: false,
       backDelay: 1500,
       strings: [
+        "Hi",
+        "My name you ask?",
         "Steve Shammah",
-        // "Well...",
         "I am a web developer!",
-        "I enjoy building stuff.",
-        // "P.S: I am an athlete also...",
-        // "A rugby player to be precise.",
+        "and I enjoy building stuff.",
+        "...",
       ],
       backSpeed: 60,
       startDelay: 500,
@@ -34,7 +34,7 @@ export const Intro = () => {
   const age = new Date().getFullYear() - 1996;
 
   return (
-    <div className='introContainer'>
+    <section className='introContainer'>
       <div className='backgroundContainer'></div>
       <div className='leftContainer'>
         <div className='image'>
@@ -46,7 +46,7 @@ export const Intro = () => {
             <a href='#contact'>
               <button>Contact Me</button>
             </a>
-            <a href='#contact' title='Feature Unavailable'>
+            <a href='#contact' title='Feature currently Unavailable'>
               <button className='cv-download'>
                 Download CV <GetApp className='icon' />
               </button>
@@ -57,14 +57,16 @@ export const Intro = () => {
               <a
                 href={`https://github.com/Shammah08`}
                 target='_blank'
-                rel='noreferrer'>
+                rel='noreferrer'
+                title='GitHub'>
                 <GitHub className='icon' />{" "}
               </a>{" "}
               |{" "}
               <a
                 href={`https://instagram.com/steveshammah`}
                 target='_blank'
-                rel='noreferrer'>
+                rel='noreferrer'
+                title='Instagram'>
                 {" "}
                 <Instagram className='icon' />{" "}
               </a>{" "}
@@ -72,7 +74,8 @@ export const Intro = () => {
               <a
                 href={`https://twitter.com/steveshammah_`}
                 target='_blank'
-                rel='noreferrer'>
+                rel='noreferrer'
+                title='Twitter'>
                 <Twitter className='icon' />
               </a>
             </div>
@@ -80,7 +83,6 @@ export const Intro = () => {
         </div>
       </div>
       <div className='rightContainer'>
-        {/* <h2 ref={textRef}></h2> */}
         <div className='container'>
           <div className='meta-data'>
             <h3>Personal Details</h3>
@@ -109,6 +111,6 @@ export const Intro = () => {
           <ArrowDropDown className='icon' />
         </a>
       </div>
-    </div>
+    </section>
   );
 };

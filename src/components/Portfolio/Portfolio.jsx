@@ -13,7 +13,7 @@ export const Portfolio = () => {
     },
     {
       name: "My Portfolio",
-      stack: ["HTML", "SCSS", "JavaScript", "React", "Material UI"],
+      stack: ["HTML", "Sass", "JavaScript", "React", "Material UI"],
       image: "",
       description: "This is my personal portfolio",
       git: "my-portfolio",
@@ -28,23 +28,50 @@ export const Portfolio = () => {
       url: "",
     },
     {
-      name: "My Blog",
+      name: "My Blog 2.0",
       stack: ["HTML", "CSS", "Python", "Flask", "JavaScript", "MySQL"],
       image: "",
-      description: "This is my personal blog.",
+      description: "This is my personal blog version 2.0.",
       git: "blog-2.0",
+      url: "",
+    },
+    {
+      name: "Manchester United",
+      stack: ["HTML", "CSS", "JavaScript", "JQuery"],
+      image: "",
+      description:
+        "This website was modelled from the landing page of the official Manchester United application.",
+      git: "man-u-clone",
+      url: "",
+    },
+    {
+      name: "My Blog",
+      stack: [
+        "HTML",
+        "CSS",
+        "BootStrap",
+        "Python",
+        "Flask",
+        "JavaScript",
+        "MySQL",
+      ],
+
+      image: "",
+      description: "This is my personal blog.",
+      git: "blog-app",
       url: "",
     },
   ];
   return (
-    <div className='portfolioContainer'>
-      <h2 id='portfolio'>Portfolio</h2>
+    <section className='portfolioContainer' id='portfolio'>
+      <h2>Portfolio</h2>
       <div className='projectsContainer'>
         {projects.map((project) => {
           return (
             <div className='project'>
               <h3>{project.name}</h3>
               <p>{project.description}</p>
+              <h4>Technologies used:</h4>
               <span>
                 {project.stack.map((item) => (
                   <i>{item}</i>
@@ -52,12 +79,20 @@ export const Portfolio = () => {
               </span>
 
               <span>
-                <a
-                  href={`https://${project.url}`}
-                  target='_blank'
-                  rel='noreferrer'>
-                  <Public className='icon' />
-                </a>
+                {project.url ? (
+                  <a
+                    href={`https://${project.url}`}
+                    target='_blank'
+                    rel='noreferrer'>
+                    <Public className='icon' />
+                  </a>
+                ) : (
+                  <Public
+                    className='icon'
+                    style={{ cursor: "not-allowed" }}
+                    title='Not Live'
+                  />
+                )}
                 <a
                   href={`https://github.com/Shammah08/${project.git}`}
                   target='_blank'
@@ -69,6 +104,6 @@ export const Portfolio = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };

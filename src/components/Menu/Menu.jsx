@@ -3,14 +3,14 @@ import "./Menu.scss";
 export const Menu = ({ menuActive, setMenuActive }) => {
   const links = ["home", "portfolio", "experience", "contact"];
   return (
-    <div className='menu'>
+    <section className='menu'>
       <ul className={menuActive ? "menuActive" : "menuInactive"}>
         {links.map((link) => (
-          <li onClick={() => setMenuActive(!menuActive)}>
-            <a href={`#${link}`}>{link}</a>
-          </li>
+          <a href={`#${link}`} onClick={() => setMenuActive(!menuActive)}>
+            <li>{link}</li>
+          </a>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };

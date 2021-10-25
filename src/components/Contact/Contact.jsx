@@ -1,9 +1,7 @@
 import "./Contact.scss";
 import {
   EmailTwoTone,
-  FlagTwoTone,
-  Home,
-  LocationCity,
+  LocationOn,
   PhoneAndroidRounded,
 } from "@material-ui/icons";
 
@@ -13,50 +11,44 @@ export const Contact = () => {
     e.preventDefaultt();
   };
   return (
-    <div id='contact' className='contactMe'>
+    <section id='contact' className='contactMe'>
       <h2>Get In Touch</h2>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio magni
-        veniam animi, quibusdam cupiditate saepe aspernatur et fuga explicabo?
-        Voluptatum? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Hic nam incidunt blanditiis tenetur doloremque nulla.
+        Have any question? Would you like to work with me? Have any criticism on
+        what you see? Fear not. Hit me up and I will get back to you ASAP.
       </p>
+
       <div className='formContainer'>
-        <form onSubmit={handleSubmit}>
-          <span>
-            <input type='text' placeholder='Name' required />{" "}
-            <input type='email' placeholder='Email' required />
-          </span>
-          <textarea
-            name=''
-            id=''
-            cols='80'
-            rows='15'
-            placeholder='Message'
-            required></textarea>
-
-          <button>Send Message</button>
-        </form>
-
         <div className='formText'>
           <span>
-            <Home className='icon' /> Naivasha Road.
+            <PhoneAndroidRounded className='icon' />
+            <h5>Phone</h5>
+            <p>+254 795 058 630</p>
           </span>
           <span>
-            <LocationCity className='icon' /> Nairobi.
+            <EmailTwoTone className='icon' />
+            <h5>Email</h5>
+            <p>Shammahsteve.o@gmail.com</p>
           </span>
           <span>
-            <FlagTwoTone className='icon' /> Kenya.
-          </span>
-
-          <span>
-            <PhoneAndroidRounded className='icon' /> +254 795 058 630.
-          </span>
-          <span>
-            <EmailTwoTone className='icon' /> Shammahsteve.o@gmail.com
+            <LocationOn className='icon' />
+            <h5>Location</h5>
+            <p>Nairobi, Kenya</p>
           </span>
         </div>
+        <form onSubmit={handleSubmit}>
+          <span>
+            <input type='text' placeholder='Name' required />
+            <input type='text' placeholder='Subject' />
+            <input type='email' placeholder='Email' required />
+          </span>
+          <div>
+            <textarea placeholder='Message' required></textarea>
+
+            <button>Send Message</button>
+          </div>
+        </form>
       </div>
-    </div>
+    </section>
   );
 };

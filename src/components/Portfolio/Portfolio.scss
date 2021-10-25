@@ -1,13 +1,17 @@
+@import "../../global.scss";
+
 .portfolioContainer {
-  // background-color: red;
-  // padding-top: 20px;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 200px;
+
   h2 {
     font-size: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 
   .projectsContainer {
@@ -15,19 +19,30 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
+    width: 95%;
     height: 90%;
-    // background-color: aqua;
 
     .project {
-      width: 500px;
+      width: 450px;
       height: 250px;
-      // background-color: yellow;
       padding: 10px;
+      margin: 5px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       box-shadow: 15px 15px 15px #333;
+      transition: all ease-in-out 0.5s;
+      border-radius: 10px;
+      background-color: $mainColor;
+      color: $secondaryColor;
+
+      &:hover {
+        color: $secondaryColor;
+        background-color: $tertiaryColor;
+
+        opacity: 0.9;
+        box-shadow: none;
+      }
 
       h3 {
         font-size: 1.6rem;
@@ -37,6 +52,7 @@
       }
       span {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
 
         > * {

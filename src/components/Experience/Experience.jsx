@@ -65,7 +65,6 @@ export const Experience = () => {
     // eslint-disable-next-line
     const job = jobs.filter((job) => job.joinDate == activeYear);
     setActiveJob(job);
-    // console.log(typeof activeJob);
   };
 
   //   Get clicked year
@@ -76,7 +75,7 @@ export const Experience = () => {
     setActiveYear(selectedYear);
   };
   return (
-    <div className='ExperienceContainer' id='experience'>
+    <section className='ExperienceContainer' id='experience'>
       <h2>Work Experience</h2>
       <div className='years'>
         {workYears.map((year) => (
@@ -94,23 +93,27 @@ export const Experience = () => {
         {activeJob.map((item) => {
           return (
             <div className='work'>
-              <h3>{item.company}</h3>
-              <span>
+              <div className='job-meta'>
+                <h3>
+                  <i>{item.company}</i>
+                </h3>
+
                 <h4>
-                  Joined: <i>{item.joinDate}</i>
-                </h4>{" "}
-                :{" "}
-                <h4>
-                  To: <i>{item.leaveDate}</i>
+                  <i>{item.role}</i>
                 </h4>
-              </span>
-              <span>
-                <h4>
-                  Title:<i>{item.role}</i>
-                </h4>
-              </span>
+
+                <span>
+                  <h4>
+                    <i>{item.joinDate}</i>
+                  </h4>{" "}
+                  -{" "}
+                  <h4>
+                    <i>{item.leaveDate}</i>
+                  </h4>
+                </span>
+              </div>
               <div className='job-description'>
-                <h4>What I did...</h4>
+                <h3>What I did...</h3>
                 <ul>
                   {item.desc.map((info) => {
                     return <li>{info}</li>;
@@ -121,6 +124,6 @@ export const Experience = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
