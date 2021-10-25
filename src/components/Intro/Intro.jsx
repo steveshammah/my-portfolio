@@ -40,7 +40,7 @@ export const Intro = () => {
         <div className='image'>
           <img src={avatar} alt='AVATAR' />
           <div className='introText'>
-            <h2 ref={textRef}></h2>
+            <h2 ref={textRef}>|</h2>
           </div>
           <div className='nav-button'>
             <a href='#contact'>
