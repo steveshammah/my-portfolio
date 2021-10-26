@@ -103,7 +103,8 @@ export const Intro = () => {
             Languages: JavaScript, Python, SQL <br /> <Star className='icon' />{" "}
             Database systems: MYSQL <br />
             <Star className='icon' /> Frameworks & Libraries: React JS, Flask,
-            JQuery <br /> <Star className='icon' /> Others: Html, CSS, Sass.
+            JQuery <br /> <Star className='icon' /> Others: Html, CSS, Sass,
+            Bootstrap.
           </p>
         </div>
 

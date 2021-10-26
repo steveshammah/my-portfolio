@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .portfolioContainer {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,9 +8,21 @@
   position: relative;
   top: 200px;
 
+  @include screen-size(phone) {
+    height: auto;
+  }
+  @include screen-size(tablet) {
+    height: auto;
+  }
+
+  @include screen-size(desktop) {
+    height: 90vh;
+  }
+
   h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    padding-top: 30px;
   }
 
   .projectsContainer {
@@ -36,6 +47,12 @@
       background-color: $mainColor;
       color: $secondaryColor;
 
+      @include screen-size(phone) {
+        margin-bottom: 20px;
+      }
+      @include screen-size(tablet) {
+        margin-bottom: 20px;
+      }
       &:hover {
         color: $secondaryColor;
         background-color: $tertiaryColor;

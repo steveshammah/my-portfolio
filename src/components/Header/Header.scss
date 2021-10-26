@@ -13,6 +13,8 @@ header {
   position: sticky;
   top: 0;
 
+
+
   .logo {
     object-fit: fill;
     height: 100%;
@@ -29,14 +31,21 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    // flex: 1;
-    // background-color: red;
     width: 80%;
+
+    @include screen-size(phone) {
+      display: none;
+    }
 
     .itemContainer {
       display: flex;
       align-items: center;
       cursor: pointer;
+      font-size: 2rem;
+
+      @include screen-size(tablet) {
+        font-size: 0.8rem;
+      }
     }
   }
   .rightContainer {

@@ -4,6 +4,7 @@ $tertiaryColor: #f50e3d;
 $mainTextColor: #dad8d8;
 $secondaryTextColor: #242425;
 $backgroundColor: #ebf2f9;
+$mainFont: Poppins;
 
 * {
   box-sizing: border-box;
@@ -17,5 +18,21 @@ a {
 }
 html {
   scroll-behavior: smooth;
-  font-family: Poppins;
+  font-family: $mainFont;
+}
+
+@mixin screen-size($res) {
+  @if $res == phone {
+    @media only screen and (max-width: 599px) {
+      @content;
+    }
+  } @else if $res == tablet {
+    @media only screen and (min-width: 600px) {
+      @content;
+    }
+  } @else if $res == desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
 }

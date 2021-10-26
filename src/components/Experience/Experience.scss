@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .ExperienceContainer {
-  height: 60vh;
   width: 100%;
   margin-top: 200px;
   padding: 20px;
@@ -9,6 +8,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @include screen-size(phone) {
+    height: auto;
+    padding: 10px;
+  }
+
+  @include screen-size(tablet) {
+    height: 100vh;
+  }
+
+  @include screen-size(desktop) {
+    height: 60vh;
+  }
 
   h2 {
     font-size: 2rem;
@@ -19,6 +31,11 @@
     justify-content: space-between;
     padding: 20px;
     width: 80%;
+
+    @include screen-size(phone) {
+      width: 100%;
+      padding: 10px;
+    }
 
     .active {
       background-color: $tertiaryColor;
@@ -36,6 +53,11 @@
       cursor: pointer;
       outline: none;
 
+      @include screen-size(phone) {
+        width: 80px;
+        font-size: 1rem;
+      }
+
       &:hover {
         background-color: $tertiaryColor;
         color: $mainTextColor;
@@ -51,6 +73,10 @@
     height: 90%;
     width: 80%;
 
+    @include screen-size(phone) {
+      width: 90%;
+    }
+
     .work {
       padding: 10px;
       width: 80%;
@@ -62,6 +88,14 @@
       box-shadow: 15px 15px 15px #333;
       border: 1px solid black;
       border-radius: 10px;
+
+      @include screen-size(phone) {
+        width: 100%;
+      }
+
+      @include screen-size(tablet) {
+        width: 100%;
+      }
 
       .job-meta {
         height: 120px;
@@ -100,7 +134,7 @@
             font-family: initial;
             letter-spacing: 1.2px;
             line-height: 30px;
-            font-family: Poppins;
+            font-family: $mainFont;
           }
         }
       }

@@ -1,5 +1,4 @@
 import "./Header.scss";
-import "./Header.media.scss";
 
 import { Person, Mail, Phone, ComputerTwoTone } from "@material-ui/icons";
 

@@ -45,7 +45,9 @@ export const Contact = () => {
           <div>
             <textarea placeholder='Message' required></textarea>
 
-            <button>Send Message</button>
+            <button title='Feature currently unavailable' disabled>
+              Send Message
+            </button>
           </div>
         </form>
       </div>

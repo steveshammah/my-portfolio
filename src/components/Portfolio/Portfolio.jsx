@@ -46,16 +46,7 @@ export const Portfolio = () => {
     },
     {
       name: "My Blog",
-      stack: [
-        "HTML",
-        "CSS",
-        "BootStrap",
-        "Python",
-        "Flask",
-        "JavaScript",
-        "MySQL",
-      ],
-
+      stack: ["HTML", "CSS", "BootStrap", "Python", "Flask", "MySQL"],
       image: "",
       description: "This is my personal blog.",
       git: "blog-app",
