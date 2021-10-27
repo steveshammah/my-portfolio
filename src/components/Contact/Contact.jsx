@@ -5,13 +5,37 @@ import {
   PhoneAndroidRounded,
 } from "@material-ui/icons";
 
+import { useRef, useState } from "react";
+
+// Email Config
+import emailjs from "emailjs-com";
+
 export const Contact = () => {
+  const formRef = useRef();
+  const [complete, setComplete] = useState(false);
+
   const handleSubmit = (e) => {
-    // Prevent form from submitting
-    e.preventDefaultt();
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_44ckheh",
+        "template_ccxvu88",
+        formRef.current,
+        "user_sPKH6oZk84TwI8ATJjGGi"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setComplete(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
   return (
-    <section id='contact' className='contactMe'>
+    <section className='contactMe'>
       <h2>Get In Touch</h2>
       <p>
         Have any question? Would you like to work with me? Have any criticism on
@@ -36,18 +60,22 @@ export const Contact = () => {
             <p>Nairobi, Kenya</p>
           </span>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='contactForm' ref={formRef}>
           <span>
-            <input type='text' placeholder='Name' required />
-            <input type='text' placeholder='Subject' />
-            <input type='email' placeholder='Email' required />
+            <input type='text' placeholder='Name' name='user_name' required />
+            <input type='text' placeholder='Subject' name='user_subject' />
+            <input
+              type='email'
+              placeholder='Email'
+              name='user_email'
+              required
+            />
           </span>
           <div>
-            <textarea placeholder='Message' required></textarea>
+            <textarea placeholder='Message' name='message' required></textarea>
 
-            <button title='Feature currently unavailable' disabled>
-              Send Message
-            </button>
+            <button>Send Message</button>
+            <span>{"Thank you. Message has been sent."}</span>
           </div>
         </form>
       </div>

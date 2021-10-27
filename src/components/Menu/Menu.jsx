@@ -6,7 +6,10 @@ export const Menu = ({ menuActive, setMenuActive }) => {
     <section className='menu'>
       <ul className={menuActive ? "menuActive" : "menuInactive"}>
         {links.map((link) => (
-          <a href={`#${link}`} onClick={() => setMenuActive(!menuActive)}>
+          <a
+            href={`#${link}`}
+            onClick={() => setMenuActive(!menuActive)}
+            key={link}>
             <li>{link}</li>
           </a>
         ))}

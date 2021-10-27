@@ -59,13 +59,13 @@ export const Portfolio = () => {
       <div className='projectsContainer'>
         {projects.map((project) => {
           return (
-            <div className='project'>
+            <div className='project' key={project.name}>
               <h3>{project.name}</h3>
               <p>{project.description}</p>
               <h4>Technologies used:</h4>
               <span>
                 {project.stack.map((item) => (
-                  <i>{item}</i>
+                  <i key={item}>{item}</i>
                 ))}
               </span>
 

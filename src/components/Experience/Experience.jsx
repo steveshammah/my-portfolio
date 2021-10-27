@@ -7,9 +7,7 @@ export const Experience = () => {
 
   useEffect(() => {
     setJob();
-    return () => {
-      console.log("Active Year: ", activeYear);
-    };
+    return () => {};
     // eslint-disable-next-line
   }, [activeYear]);
   const workYears = [2020, 2019, 2017, 2015];
@@ -82,7 +80,8 @@ export const Experience = () => {
           <span
             onClick={handleClick}
             // eslint-disable-next-line
-            className={year == activeYear ? "active" : ""}>
+            className={year == activeYear ? "active" : ""}
+            key={year}>
             {year}
           </span>
         ))}
@@ -92,7 +91,7 @@ export const Experience = () => {
       <div className='jobs'>
         {activeJob.map((item) => {
           return (
-            <div className='work'>
+            <div className='work' key={item.role}>
               <div className='job-meta'>
                 <h3>
                   <i>{item.company}</i>
@@ -116,7 +115,7 @@ export const Experience = () => {
                 <h3>What I did...</h3>
                 <ul>
                   {item.desc.map((info) => {
-                    return <li>{info}</li>;
+                    return <li key={info}>{info}</li>;
                   })}
                 </ul>
               </div>

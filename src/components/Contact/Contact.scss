@@ -17,7 +17,8 @@
   }
 
   @include screen-size(desktop) {
-    height: 80vh;
+    height: 100vh;
+    margin-top: 80px;
   }
 
   h2 {
@@ -105,14 +106,16 @@
         width: 100%;
         height: 100%;
       }
-      span {
+      > span {
         display: flex;
-        justify-content: space-around;
+        align-items: flex-start;
+        justify-content: center;
         flex-direction: column;
+        // background-color: red;
 
         @include screen-size(phone) {
           width: 80%;
-          height: 40%;
+          height: 50%;
         }
 
         @include screen-size(tablet) {
@@ -121,14 +124,16 @@
         }
 
         > input {
-          height: 35px;
+          // height: 35px;
           width: 90%;
-          border-radius: 10px;
-          border: 1px solid #333;
+          // border-radius: 10px;
+          border: none;
+          border-bottom: 1px solid #333;
           outline: none;
           font-size: 1rem;
           font-weight: 500;
           padding: 5px 20px;
+          margin: 5px;
 
           @include screen-size(tablet) {
             height: 30px;
@@ -139,10 +144,11 @@
       div {
         display: flex;
         flex-direction: column;
-        height: 70%;
+        height: 100%;
         justify-content: space-between;
         align-items: flex-end;
         width: 70%;
+        overflow: hidden;
 
         @include screen-size(phone) {
           width: 100%;
@@ -160,7 +166,7 @@
         }
 
         button {
-          height: 40px;
+          height: 50px;
           width: 150px;
           border-radius: 10px;
           outline: none;
@@ -169,10 +175,37 @@
           cursor: pointer;
           background-color: $mainColor;
           color: $mainTextColor;
-          cursor: not-allowed;
+        }
+        > span {
+          margin-top: 5px;
+          color: black;
+          padding: 10px;
+          border: 1px solid $mainColor;
+          visibility: hidden;
+          animation: slideIn 10s ease-in-out forwards;
+          border-radius: 10px;
 
-          &:hover {
-            background-color: grey;
+          @keyframes slideIn {
+            from {
+              visibility: visible;
+              transform: translateX(50vw);
+            }
+            50% {
+              visibility: visible;
+
+              transform: translateX(0vw);
+              color: green;
+            }
+            75% {
+              visibility: visible;
+
+              transform: translateX(0vw);
+              color: green;
+            }
+            to {
+              transform: translateX(-100vw);
+              display: none;
+            }
           }
         }
       }
