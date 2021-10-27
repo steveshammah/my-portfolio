@@ -12,6 +12,10 @@ import emailjs from "emailjs-com";
 
 export const Contact = () => {
   const formRef = useRef();
+  const nameRef = useRef();
+  const subjectRef = useRef();
+  const emailRef = useRef();
+  const textRef = useRef();
   const [complete, setComplete] = useState(false);
 
   const handleSubmit = (e) => {
@@ -28,6 +32,10 @@ export const Contact = () => {
         (result) => {
           console.log(result.text);
           setComplete(true);
+
+          // Reset contact form
+
+          formRef.current.reset();
         },
         (error) => {
           console.log(error.text);
@@ -60,7 +68,11 @@ export const Contact = () => {
             <p>Nairobi, Kenya</p>
           </span>
         </div>
-        <form onSubmit={handleSubmit} className='contactForm' ref={formRef}>
+        <form
+          onSubmit={handleSubmit}
+          id='contact'
+          className='contactForm'
+          ref={formRef}>
           <span>
             <input type='text' placeholder='Name' name='user_name' required />
             <input type='text' placeholder='Subject' name='user_subject' />
@@ -75,7 +87,7 @@ export const Contact = () => {
             <textarea placeholder='Message' name='message' required></textarea>
 
             <button>Send Message</button>
-            <span>{"Thank you. Message has been sent."}</span>
+            <span>{complete && "Thank you. Message has been sent."}</span>
           </div>
         </form>
       </div>

@@ -8,6 +8,7 @@ import {
   GetApp,
   Star,
 } from "@material-ui/icons";
+import CV from "./CV.pdf";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
 
@@ -46,7 +47,7 @@ export const Intro = () => {
             <a href='#contact'>
               <button>Contact Me</button>
             </a>
-            <a href='#contact' title='Feature currently Unavailable'>
+            <a href={CV} download='Steve_shammah-CV'>
               <button className='cv-download'>
                 Download CV <GetApp className='icon' />
               </button>

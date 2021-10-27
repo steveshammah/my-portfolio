@@ -178,35 +178,9 @@
         }
         > span {
           margin-top: 5px;
-          color: black;
+          color: green;
           padding: 10px;
-          border: 1px solid $mainColor;
-          visibility: hidden;
-          animation: slideIn 10s ease-in-out forwards;
           border-radius: 10px;
-
-          @keyframes slideIn {
-            from {
-              visibility: visible;
-              transform: translateX(50vw);
-            }
-            50% {
-              visibility: visible;
-
-              transform: translateX(0vw);
-              color: green;
-            }
-            75% {
-              visibility: visible;
-
-              transform: translateX(0vw);
-              color: green;
-            }
-            to {
-              transform: translateX(-100vw);
-              display: none;
-            }
-          }
         }
       }
     }
