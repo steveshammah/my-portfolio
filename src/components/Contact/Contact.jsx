@@ -12,10 +12,6 @@ import emailjs from "emailjs-com";
 
 export const Contact = () => {
   const formRef = useRef();
-  const nameRef = useRef();
-  const subjectRef = useRef();
-  const emailRef = useRef();
-  const textRef = useRef();
   const [complete, setComplete] = useState(false);
 
   const handleSubmit = (e) => {
