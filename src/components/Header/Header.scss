@@ -13,8 +13,6 @@ header {
   position: sticky;
   top: 0;
 
-
-
   .logo {
     object-fit: fill;
     height: 100%;
@@ -40,7 +38,6 @@ header {
     .itemContainer {
       display: flex;
       align-items: center;
-      cursor: pointer;
       font-size: 2rem;
 
       @include screen-size(tablet) {
@@ -50,7 +47,7 @@ header {
   }
   .rightContainer {
     .burgerNav {
-      height: 22px;
+      height: 24px;
       width: 30px;
       display: flex;
       justify-content: space-between;

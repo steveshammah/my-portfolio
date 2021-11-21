@@ -1,7 +1,7 @@
 import "./Portfolio.scss";
 import { GitHub, Public } from "@material-ui/icons";
 
-export const Portfolio = () => {
+export const Portfolio = ({ setMenuActive }) => {
   const projects = [
     {
       name: "The Good App",
@@ -54,7 +54,10 @@ export const Portfolio = () => {
     },
   ];
   return (
-    <section className='portfolioContainer' id='portfolio'>
+    <section
+      className='portfolioContainer'
+      id='portfolio'
+      onClick={() => setMenuActive(false)}>
       <h2>Portfolio</h2>
       <div className='projectsContainer'>
         {projects.map((project) => {

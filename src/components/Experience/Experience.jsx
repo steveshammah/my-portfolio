@@ -1,7 +1,7 @@
 import "./Experience.scss";
 import { useState, useEffect } from "react";
 
-export const Experience = () => {
+export const Experience = ({ setMenuActive }) => {
   const [activeYear, setActiveYear] = useState(2020);
   const [activeJob, setActiveJob] = useState([]);
 
@@ -73,7 +73,10 @@ export const Experience = () => {
     setActiveYear(selectedYear);
   };
   return (
-    <section className='ExperienceContainer' id='experience'>
+    <section
+      className='ExperienceContainer'
+      id='experience'
+      onClick={() => setMenuActive(false)}>
       <h2>Work Experience</h2>
       <div className='years'>
         {workYears.map((year) => (

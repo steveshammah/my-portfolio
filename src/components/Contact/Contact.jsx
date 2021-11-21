@@ -10,7 +10,7 @@ import { useRef, useState } from "react";
 // Email Config
 import emailjs from "emailjs-com";
 
-export const Contact = () => {
+export const Contact = ({ setMenuActive }) => {
   const formRef = useRef();
   const [complete, setComplete] = useState(false);
 
@@ -39,7 +39,7 @@ export const Contact = () => {
       );
   };
   return (
-    <section className='contactMe'>
+    <section className='contactMe' onClick={() => setMenuActive(false)}>
       <h2>Get In Touch</h2>
       <p>
         Have any question? Would you like to work with me? Have any criticism on

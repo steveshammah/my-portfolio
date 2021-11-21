@@ -12,7 +12,7 @@ import CV from "./CV.pdf";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
 
-export const Intro = () => {
+export const Intro = ({setMenuActive}) => {
   const textRef = useRef();
   useEffect(() => {
     init(textRef.current, {
@@ -35,7 +35,7 @@ export const Intro = () => {
   const age = new Date().getFullYear() - 1996;
 
   return (
-    <section className='introContainer'>
+    <section className='introContainer' onClick={()=> setMenuActive(false)}>
       <div className='backgroundContainer'></div>
       <div className='leftContainer'>
         <div className='image'>
