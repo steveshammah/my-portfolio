@@ -5,7 +5,7 @@ export const Portfolio = ({ setMenuActive }) => {
   const projects = [
     {
       name: "The Good App",
-      stack: ["HTML", "CSS", "JavaScript", "React", "React Icons"],
+      stack: ["HTML", "Sass", "JavaScript", "React", "React Icons"],
       image: "",
       description: "An application model of an agency. ",
       git: "thegoodapp",
@@ -17,7 +17,7 @@ export const Portfolio = ({ setMenuActive }) => {
       image: "",
       description: "This is my personal portfolio",
       git: "my-portfolio",
-      url: "steveshammah.netlify.app",
+      url: "",
     },
     {
       name: "The Farm",

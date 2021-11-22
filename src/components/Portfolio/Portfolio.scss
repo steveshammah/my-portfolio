@@ -44,8 +44,10 @@
       box-shadow: 15px 15px 15px #333;
       transition: all ease-in-out 0.5s;
       border-radius: 10px;
-      background-color: $mainColor;
-      color: $secondaryColor;
+      border: 1px solid #333;
+
+      color: $secondaryTextColor;
+      background-color: $secondaryColor;
 
       @include screen-size(phone) {
         margin-bottom: 20px;
@@ -54,11 +56,9 @@
         margin-bottom: 20px;
       }
       &:hover {
+        background-color: $mainColor;
         color: $secondaryColor;
-        background-color: $tertiaryColor;
-
         opacity: 0.9;
-        box-shadow: none;
       }
 
       h3 {

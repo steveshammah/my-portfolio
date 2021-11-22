@@ -10,7 +10,7 @@ export const Experience = ({ setMenuActive }) => {
     return () => {};
     // eslint-disable-next-line
   }, [activeYear]);
-  const workYears = [2020, 2019, 2017, 2015];
+  const workYears = [2020, 2019, 2017];
 
   //   Jobs Object
   const jobs = [
@@ -45,15 +45,6 @@ export const Experience = ({ setMenuActive }) => {
         " Gained experience with computer diagnostics of both hardware and software.",
         " Computers, laptops and other peripheral hardware repairs",
         "Networking: Setting up of Local Area Network and routing configuration",
-      ],
-    },
-    {
-      company: "Vacation Advisors KE",
-      joinDate: 2015,
-      leaveDate: 2015,
-      role: "Telemarketer",
-      desc: [
-        "Contacted potential clients and enlighted them on the companies products in efforts to get the clients to purchase and make the sale.",
       ],
     },
   ];

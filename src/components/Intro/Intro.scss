@@ -14,8 +14,10 @@
   }
 
   .backgroundContainer {
+    background-image: url("./code.jpg");
+    opacity: 0.4;
     transition: all ease-in-out 10s;
-    animation: changeImage 20s infinite forwards;
+    animation: changeImage 20s ease-in infinite forwards;
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -169,7 +171,6 @@
     @include screen-size(phone) {
       top: 40vh;
       height: 75%;
-      // background-color: red;
     }
 
     .container {
@@ -194,10 +195,6 @@
 
         @include screen-size(phone) {
           height: 50%;
-          // background-color: aqua;
-          // color: red;
-          // padding-top: 10px;
-          // justify-content: center;
         }
 
         span {
@@ -251,11 +248,15 @@
 
     @keyframes changeImage {
       0% {
-        background-image: url("./code.jpg");
+        background-image: url("./comp.jpg");
         opacity: 0.4;
       }
-      50% {
+      33% {
         background-image: url("./web.jpg");
+        opacity: 0.4;
+      }
+      66% {
+        background-image: url("./code.jpg");
         opacity: 0.4;
       }
       100% {

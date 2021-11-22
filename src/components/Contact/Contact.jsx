@@ -42,8 +42,8 @@ export const Contact = ({ setMenuActive }) => {
     <section className='contactMe' onClick={() => setMenuActive(false)}>
       <h2>Get In Touch</h2>
       <p>
-        Have any question? Would you like to work with me? Have any criticism on
-        what you see? Fear not. Hit me up and I will get back to you ASAP.
+        Have any questions? Would you like to work with me? <br />
+        Hit me up and I will get back to you ASAP.
       </p>
 
       <div className='formContainer'>
