@@ -89,7 +89,7 @@ export const Portfolio = ({ setMenuActive }) => {
                   />
                 )}
                 <a
-                  href={`https://github.com/Shammah08/${project.git}`}
+                  href={`https://github.com/steveshammah/${project.git}`}
                   target='_blank'
                   rel='noreferrer'>
                   <GitHub className='icon' />
