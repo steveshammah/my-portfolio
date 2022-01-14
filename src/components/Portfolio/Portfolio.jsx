@@ -12,6 +12,14 @@ export const Portfolio = ({ setMenuActive }) => {
       url: "thecompanyke.netlify.app",
     },
     {
+      name: "Impala Rugby App",
+      stack: ["HTML", "Sass", "JavaScript", "React", "Material UI"],
+      image: "",
+      description: "A sports team website",
+      git: "",
+      url: "impalarugby.netlify.app",
+    },
+    {
       name: "My Portfolio",
       stack: ["HTML", "Sass", "JavaScript", "React", "Material UI"],
       image: "",
@@ -28,10 +36,11 @@ export const Portfolio = ({ setMenuActive }) => {
       url: "",
     },
     {
-      name: "My Blog 2.0",
+      name: "My Blog",
       stack: ["HTML", "CSS", "Python", "Flask", "JavaScript", "MySQL"],
       image: "",
-      description: "This is my personal blog version 2.0.",
+      description:
+        "This is my personal blog used to document part of my learning process.",
       git: "blog-2.0",
       url: "",
     },
@@ -42,14 +51,6 @@ export const Portfolio = ({ setMenuActive }) => {
       description:
         "This website was modelled from the landing page of the official Manchester United application.",
       git: "man-u-clone",
-      url: "",
-    },
-    {
-      name: "My Blog",
-      stack: ["HTML", "CSS", "BootStrap", "Python", "Flask", "MySQL"],
-      image: "",
-      description: "This is my personal blog.",
-      git: "blog-app",
       url: "",
     },
   ];

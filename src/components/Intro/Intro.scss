@@ -17,7 +17,7 @@
     background-image: url("./code.jpg");
     opacity: 0.4;
     transition: all ease-in-out 10s;
-    animation: changeImage 20s ease-in infinite forwards;
+    // animation: changeImage 20s ease-in infinite forwards;
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -110,7 +110,7 @@
           }
         }
         .cv-download {
-          width: 120px;
+          width: 150px;
           display: flex;
           align-items: center;
           justify-content: space-evenly;

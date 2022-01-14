@@ -7,7 +7,7 @@ export const Experience = ({ setMenuActive }) => {
 
   useEffect(() => {
     setJob();
-    return () => {};
+
     // eslint-disable-next-line
   }, [activeYear]);
   const workYears = [2020, 2019, 2017];

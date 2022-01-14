@@ -7,12 +7,13 @@ import {
   ArrowDropDown,
   GetApp,
   Star,
+  LinkedIn,
 } from "@material-ui/icons";
 import CV from "./CV.pdf";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
 
-export const Intro = ({setMenuActive}) => {
+export const Intro = ({ setMenuActive }) => {
   const textRef = useRef();
   useEffect(() => {
     init(textRef.current, {
@@ -22,8 +23,8 @@ export const Intro = ({setMenuActive}) => {
         "Hi",
         "My name you ask?",
         "Steve Shammah",
-        "I am a web developer!",
-        "and I enjoy building stuff.",
+        "I'm a software developer!",
+        "I enjoy building stuff.",
         "...",
       ],
       backSpeed: 60,
@@ -35,7 +36,7 @@ export const Intro = ({setMenuActive}) => {
   const age = new Date().getFullYear() - 1996;
 
   return (
-    <section className='introContainer' onClick={()=> setMenuActive(false)}>
+    <section className='introContainer' onClick={() => setMenuActive(false)}>
       <div className='backgroundContainer'></div>
       <div className='leftContainer'>
         <div className='image'>
@@ -49,12 +50,19 @@ export const Intro = ({setMenuActive}) => {
             </a>
             <a href={CV} download='Steve_shammah-CV'>
               <button className='cv-download'>
-                Download CV <GetApp className='icon' />
+                Download Resume <GetApp className='icon' />
               </button>
             </a>{" "}
           </div>
           <div className='personalText'>
             <div className='social'>
+              <a
+                href={`https://www.linkedin.com/in/steve-shammah-252b62191/`}
+                target='_blank'
+                rel='noreferrer'
+                title='Linkedin'>
+                <LinkedIn className='icon' />{" "}
+              </a>
               <a
                 href={`https://github.com/Shammah08`}
                 target='_blank'
@@ -98,14 +106,14 @@ export const Intro = ({setMenuActive}) => {
             </span>
           </div>
           <p>
-            I am a web developer with knowledge and practice in designing and
-            building application with some of the up to date technologies.{" "}
-            <br /> Key technologies include: <br /> <Star className='icon' />{" "}
-            Languages: JavaScript, Python, SQL <br /> <Star className='icon' />{" "}
-            Database systems: MYSQL <br />
-            <Star className='icon' /> Frameworks & Libraries: React JS, Flask,
-            JQuery <br /> <Star className='icon' /> Others: Html, CSS, Sass,
-            Bootstrap.
+            I Software Developer with experience and knowledge in designing and
+            building websites with some of the latest technologies. <br /> Key
+            skills include: <br /> <Star className='icon' /> Languages:
+            JavaScript, Python, SQL <br /> <Star className='icon' /> Database
+            systems: MYSQL <br />
+            <Star className='icon' /> Frameworks & Libraries: React JS,Django,
+            Flask, JQuery <br /> <Star className='icon' /> Others: Html, CSS,
+            Sass, Bootstrap.
           </p>
         </div>
 
