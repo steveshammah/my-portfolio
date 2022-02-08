@@ -1,52 +1,55 @@
 @import "../../global.scss";
 
 .introContainer {
+  // background-color: red;
   background-color: $secondaryColor;
-  height: 100vh;
+  height: 140vh;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 150px;
+
+  // margin-bottom: 150px;
 
   @include screen-size(phone) {
-    height: 150vh;
+    // height: 150vh;
   }
 
-  .backgroundContainer {
-    background-image: url("./code.jpg");
-    opacity: 0.4;
-    transition: all ease-in-out 10s;
-    // animation: changeImage 20s ease-in infinite forwards;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 70px;
-    height: 100vh;
-    width: 100%;
-
-    @include screen-size(phone) {
-      height: 120vh;
-    }
-  }
   .leftContainer {
-    width: 100%;
-    height: 200vh;
+    width: 100% !important;
+    height: 70%;
     position: relative;
-    top: 30vh;
+    // top: 30vh;
     transition: all ease-in-out 1.5s;
+    // background-color: green;
+
+    .backgroundContainer {
+      background-image: url("./code.jpg");
+      opacity: 0.4;
+      transition: all ease-in-out 10s;
+      // animation: changeImage 20s ease-in infinite forwards;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      // top: 70px;
+      height: 100%;
+      width: 100%;
+
+      @include screen-size(phone) {
+        // height: 120vh;
+      }
+    }
 
     @include screen-size(phone) {
-      top: 20vh;
-      height: 570px;
     }
 
     @include screen-size(tablet) {
-      width: 500px;
+      // width: 500px;
     }
     .image {
       width: 100%;
-      height: 100%;
+      height: 80%;
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -81,27 +84,33 @@
       }
       .nav-button {
         height: 60px;
-        width: 60%;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
 
         @include screen-size(phone) {
-          width: 70%;
+          width: 60%;
         }
-
+        @include screen-size(tablet) {
+          width: 30%;
+        }
+        @include screen-size(desktop) {
+          width: 20%;
+        }
         a {
           text-decoration: none;
 
           button {
             height: 40px;
             width: 120px;
-            border-radius: 10px;
+            // border-radius: 10px;
             outline: none;
             cursor: pointer;
             border: none;
             background-color: $mainColor;
             color: whitesmoke;
+            position: relative;
 
             &:hover {
               background-color: $mainTextColor;
@@ -110,10 +119,10 @@
           }
         }
         .cv-download {
-          width: 150px;
           display: flex;
           align-items: center;
           justify-content: space-evenly;
+          margin-left: 10px;
 
           .icon {
             font-size: 1.2rem;
@@ -122,10 +131,18 @@
       }
 
       .personalText {
-        width: 60%;
         display: flex;
         align-items: center;
         justify-content: space-around;
+        @include screen-size(phone) {
+          width: 60%;
+        }
+        @include screen-size(tablet) {
+          width: 30%;
+        }
+        @include screen-size(desktop) {
+          width: 20%;
+        }
 
         .social {
           display: flex;
@@ -153,25 +170,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    position: relative;
-    top: 35vh;
+    // position: relative;
+    // top: 35vh;
     box-shadow: 15px 15px 15px #333;
-    border-radius: 10px;
-    width: 90%;
+    // border-radius: 10px;
+    width: 100%;
+    height: 30%;
 
     background-color: $mainColor;
     color: $mainTextColor;
 
     @include screen-size(desktop) {
-      height: 350px !important;
+      height: 30%;
     }
-    @include screen-size(tablet) {
-      height: 500px;
-    }
-    @include screen-size(phone) {
-      top: 40vh;
-      height: 75%;
-    }
+    // @include screen-size(tablet) {
+    //   height: 500px;
+    // }
+    // @include screen-size(phone) {
+    //   // top: 40vh;
+    //   height: 75%;
+    // }
 
     .container {
       width: 90%;

@@ -3,7 +3,6 @@ import { Header } from "./components/Header/Header";
 import { Menu } from "./components/Menu/Menu";
 import { Intro } from "./components/Intro/Intro";
 import { Portfolio } from "./components/Portfolio/Portfolio";
-import { Experience } from "./components/Experience/Experience";
 import { Contact } from "./components/Contact/Contact";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <div className='sections'>
         <Intro menuActive={menuActive} setMenuActive={setMenuActive} />
         <Portfolio menuActive={menuActive} setMenuActive={setMenuActive} />
-        <Experience menuActive={menuActive} setMenuActive={setMenuActive} />
         <Contact menuActive={menuActive} setMenuActive={setMenuActive} />
       </div>
     </div>

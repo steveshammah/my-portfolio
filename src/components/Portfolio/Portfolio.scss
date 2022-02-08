@@ -2,83 +2,250 @@
 
 .portfolioContainer {
   display: flex;
-  flex-wrap: wrap;
-  // flex-direction: column;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  // background-color: red;
+  // top: 200px;
   position: relative;
-  top: 200px;
+  margin-top: 50px;
 
-  @include screen-size(phone) {
-    height: auto;
-  }
-  @include screen-size(tablet) {
-    height: 130vh;
-  }
-
-  @include screen-size(desktop) {
-    height: 90vh !important;
-  }
-
-  h2 {
-    font-size: 2rem;
+  .project-view {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     margin-bottom: 10px;
-    padding-top: 30px;
-    display: block;
-    // background-color: red;
-    // width: 100%;
+    width: auto;
+
+    h2 {
+      font-size: 2rem;
+      padding: 10px;
+      text-transform: uppercase;
+      // display: block;
+      background-color: $mainColor;
+      // width: 100%;
+      cursor: pointer;
+      color: $mainTextColor;
+
+      &.active {
+        background-color: $tertiaryColor;
+        color: white;
+        cursor: default;
+      }
+    }
   }
 
-  .projectsContainer {
+  .projectsWrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    // flex-direction: column;
     align-items: center;
-    width: 95%;
-    height: 90%;
+    justify-content: center;
 
-    .project {
-      width: 450px;
-      height: 250px;
-      padding: 10px;
-      margin: 5px;
+    @include screen-size(phone) {
+      height: auto;
+    }
+    @include screen-size(tablet) {
+      height: 130vh;
+    }
+
+    @include screen-size(desktop) {
+      height: 90vh !important;
+    }
+
+    .projectsContainer {
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      box-shadow: 15px 15px 15px #333;
-      transition: all ease-in-out 0.5s;
-      border-radius: 10px;
-      border: 1px solid #333;
-      color: $secondaryTextColor;
-      background-color: $secondaryColor;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 95%;
+      height: 90%;
+
+      .project {
+        width: 450px;
+        height: 250px;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: 15px 15px 15px #333;
+        transition: all ease-in-out 0.5s;
+        // border-radius: 10px;
+        border: 1px solid #333;
+        color: $secondaryTextColor;
+        background-color: $secondaryColor;
+
+        @include screen-size(phone) {
+          margin-bottom: 20px;
+        }
+        @include screen-size(tablet) {
+          margin-bottom: 20px;
+        }
+        &:hover {
+          background-color: $mainColor;
+          color: $secondaryColor;
+          opacity: 0.9;
+        }
+
+        h3 {
+          font-size: 1.6rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+        span {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+
+          > * {
+            margin-left: 20px;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .ExperienceContainer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @include screen-size(phone) {
+      height: auto;
+      padding: 10px;
+    }
+
+    @include screen-size(tablet) {
+      height: 100vh;
+    }
+
+    @include screen-size(desktop) {
+      height: 60vh;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .years {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      width: 80%;
 
       @include screen-size(phone) {
-        margin-bottom: 20px;
-      }
-      @include screen-size(tablet) {
-        margin-bottom: 20px;
-      }
-      &:hover {
-        background-color: $mainColor;
-        color: $secondaryColor;
-        opacity: 0.9;
-      }
-
-      h3 {
-        font-size: 1.6rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-      span {
-        display: flex;
-        flex-wrap: wrap;
         width: 100%;
+        padding: 10px;
+      }
 
-        > * {
-          margin-left: 20px;
-          text-decoration: underline;
-          cursor: pointer;
+      .active {
+        background-color: $tertiaryColor;
+        color: $mainTextColor;
+      }
+
+      span {
+        font-weight: 500;
+        border: 1px solid black;
+        // border-radius: 10px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        outline: none;
+        padding: 5px;
+
+        @include screen-size(phone) {
+          width: 80px;
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background-color: $tertiaryColor;
+          color: $mainTextColor;
+          box-shadow: 10px 10px 10px #333;
+        }
+      }
+    }
+
+    .jobs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90%;
+      width: 80%;
+
+      @include screen-size(phone) {
+        width: 90%;
+      }
+
+      .work {
+        padding: 10px;
+        width: 80%;
+        min-height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 15px 15px 15px #333;
+        border: 1px solid black;
+        // border-radius: 10px;
+
+        @include screen-size(phone) {
+          width: 100%;
+        }
+
+        @include screen-size(tablet) {
+          width: 100%;
+        }
+
+        .job-meta {
+          height: 120px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+
+          h3 {
+            font-size: 1.4rem;
+          }
+          span {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 110px;
+
+            h4 {
+              font-weight: 500;
+            }
+          }
+        }
+        .job-description {
+          width: 90%;
+          height: auto;
+          flex: 1;
+          padding: 10px;
+
+          ul {
+            list-style: disc;
+
+            li {
+              font-size: inherit;
+              color: black;
+              text-transform: initial;
+              font-family: initial;
+              letter-spacing: 1.2px;
+              line-height: 30px;
+              font-family: $mainFont;
+            }
+          }
         }
       }
     }

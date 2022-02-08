@@ -1,4 +1,4 @@
-import "./Experience.scss";
+import "./Portfolio.scss";
 import { useState, useEffect } from "react";
 
 export const Experience = ({ setMenuActive }) => {
@@ -68,7 +68,6 @@ export const Experience = ({ setMenuActive }) => {
       className='ExperienceContainer'
       id='experience'
       onClick={() => setMenuActive(false)}>
-      <h2>Work Experience</h2>
       <div className='years'>
         {workYears.map((year) => (
           <span
@@ -80,7 +79,6 @@ export const Experience = ({ setMenuActive }) => {
           </span>
         ))}
       </div>
-
       {/* Map through active job */}
       <div className='jobs'>
         {activeJob.map((item) => {

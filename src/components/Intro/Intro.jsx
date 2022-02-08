@@ -3,7 +3,6 @@ import avatar from "./cartoon-avatar.jpg";
 import {
   Twitter,
   GitHub,
-  Instagram,
   ArrowDropDown,
   GetApp,
   Star,
@@ -23,8 +22,9 @@ export const Intro = ({ setMenuActive }) => {
         "Hi",
         "My name you ask?",
         "Steve Shammah",
-        "I'm a software developer!",
-        "I enjoy building stuff.",
+        "A Full Stack Web Developer",
+        "Enthuisiastic about tech",
+        "and all the bugs that come with it.",
         "...",
       ],
       backSpeed: 60,
@@ -37,8 +37,9 @@ export const Intro = ({ setMenuActive }) => {
 
   return (
     <section className='introContainer' onClick={() => setMenuActive(false)}>
-      <div className='backgroundContainer'></div>
       <div className='leftContainer'>
+        <div className='backgroundContainer'></div>
+
         <div className='image'>
           <img src={avatar} alt='AVATAR' />
           <div className='introText'>
@@ -50,7 +51,7 @@ export const Intro = ({ setMenuActive }) => {
             </a>
             <a href={CV} download='Steve_shammah-CV'>
               <button className='cv-download'>
-                Download Resume <GetApp className='icon' />
+                Resume <GetApp className='icon' />
               </button>
             </a>{" "}
           </div>
@@ -62,22 +63,14 @@ export const Intro = ({ setMenuActive }) => {
                 rel='noreferrer'
                 title='Linkedin'>
                 <LinkedIn className='icon' />{" "}
-              </a>
+              </a>{" "}
+              |
               <a
                 href={`https://github.com/Shammah08`}
                 target='_blank'
                 rel='noreferrer'
                 title='GitHub'>
                 <GitHub className='icon' />{" "}
-              </a>{" "}
-              |{" "}
-              <a
-                href={`https://instagram.com/steveshammah`}
-                target='_blank'
-                rel='noreferrer'
-                title='Instagram'>
-                {" "}
-                <Instagram className='icon' />{" "}
               </a>{" "}
               |
               <a

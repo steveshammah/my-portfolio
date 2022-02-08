@@ -111,7 +111,6 @@
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
-        
 
         @include screen-size(phone) {
           width: 80%;
@@ -153,7 +152,7 @@
         }
 
         textarea {
-          border-radius: 10px;
+          // border-radius: 10px;
           border: 1px solid #333;
           margin-top: 50px;
           padding: 10px;
@@ -166,7 +165,7 @@
         button {
           height: 50px;
           width: 150px;
-          border-radius: 10px;
+          // border-radius: 10px;
           outline: none;
           border: none;
           margin-top: 30px;
@@ -178,7 +177,7 @@
           margin-top: 5px;
           color: green;
           padding: 10px;
-          border-radius: 10px;
+          // border-radius: 10px;
         }
       }
     }
