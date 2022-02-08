@@ -2,22 +2,22 @@ import "./Portfolio.scss";
 import { useState, useEffect } from "react";
 
 export const Experience = ({ setMenuActive }) => {
-  const [activeYear, setActiveYear] = useState(2020);
+  const [activeYear, setActiveYear] = useState("2020");
   const [activeJob, setActiveJob] = useState([]);
+  const workYears = ["2022", "2020", "2017"];
 
   useEffect(() => {
     setJob();
 
     // eslint-disable-next-line
   }, [activeYear]);
-  const workYears = [2020, 2019, 2017];
 
   //   Jobs Object
   const jobs = [
     {
       company: "Resolution Insurance Ltd",
-      joinDate: 2020,
-      leaveDate: "Present",
+      joinDate: "July 2020",
+      leaveDate: "January 2022",
       role: "Underwriting Executive",
       desc: [
         " Reconciled group and individual renewal rates based on information provided by the Underwriters and actuarial/pricing department using the organisation’s core system. The process generates invoices for finance approval.",
@@ -27,8 +27,8 @@ export const Experience = ({ setMenuActive }) => {
     },
     {
       company: "Resolution Insurance Ltd",
-      joinDate: 2019,
-      leaveDate: 2020,
+      joinDate: "April 2019",
+      leaveDate: "July 2020",
       role: "Claims Executive",
       desc: [
         "Examined claims forms and other records to determine insurance coverage and validity.",
@@ -38,9 +38,9 @@ export const Experience = ({ setMenuActive }) => {
     },
     {
       company: "Fashtech Computers Ltd",
-      joinDate: 2017,
-      leaveDate: 2018,
-      role: "IT Technician",
+      joinDate: "September 2017",
+      leaveDate: "December 2017",
+      role: "IT Technician - Internship",
       desc: [
         " Gained experience with computer diagnostics of both hardware and software.",
         " Computers, laptops and other peripheral hardware repairs",
@@ -52,7 +52,7 @@ export const Experience = ({ setMenuActive }) => {
   //   Set Selected Job -Year
   const setJob = () => {
     // eslint-disable-next-line
-    const job = jobs.filter((job) => job.joinDate == activeYear);
+    const job = jobs.filter((job) => job.leaveDate.includes(activeYear));
     setActiveJob(job);
   };
 
@@ -93,14 +93,10 @@ export const Experience = ({ setMenuActive }) => {
                   <i>{item.role}</i>
                 </h4>
 
-                <span>
-                  <h4>
-                    <i>{item.joinDate}</i>
-                  </h4>{" "}
-                  -{" "}
-                  <h4>
-                    <i>{item.leaveDate}</i>
-                  </h4>
+                <span className='work-period'>
+                  From
+                  <i>{item.joinDate} </i> to
+                  <i> {item.leaveDate}</i>{" "}
                 </span>
               </div>
               <div className='job-description'>

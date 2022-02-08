@@ -5,20 +5,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 20px 10px 20px;
+  padding: 80px 20px 10px 20px;
   width: 100%;
+  margin-top: 80px;
 
   @include screen-size(phone) {
-    height: 120vh;
+    min-height: auto;
   }
 
   @include screen-size(tablet) {
-    height: 100vh;
+    height: 90vh;
   }
 
   @include screen-size(desktop) {
-    height: 100vh;
-    margin-top: 80px;
+    height: 80vh !important;
   }
 
   h2 {
@@ -53,26 +53,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 50%;
+      height: 80%;
       width: 100%;
+
+      padding: 10px;
 
       @include screen-size(phone) {
         flex-direction: column;
         margin: 5px;
+        // height: auto;
       }
 
       span {
         display: flex;
         align-items: center;
-
         justify-content: space-around;
         flex-direction: column;
 
         @include screen-size(phone) {
           font-size: 1rem;
           width: 70%;
-          height: 100%;
-          margin: 5px;
+          // height: 100%;
+          margin: 10px 0;
         }
 
         @include screen-size(tablet) {
@@ -89,8 +91,12 @@
         .icon {
           font-size: 2.2rem;
         }
+        h5 {
+          text-transform: uppercase;
+        }
         p {
           color: $mainColor;
+          margin-top: 10px;
         }
       }
     }

@@ -14,13 +14,13 @@ export const Portfolio = ({ setMenuActive, menuActive }) => {
       <span className='project-view'>
         {projectView ? (
           <>
-            <h2 className='active'>Project</h2>
-            <h2 onClick={() => setProjectView(!projectView)}>Work</h2>
+            <h2 className='active'>Projects</h2>
+            <h2 onClick={() => setProjectView(!projectView)}>Experience</h2>
           </>
         ) : (
           <>
-            <h2 onClick={() => setProjectView(!projectView)}>Project</h2>
-            <h2 className='active'>Work</h2>
+            <h2 onClick={() => setProjectView(!projectView)}>Projects</h2>
+            <h2 className='active'>Experience</h2>
           </>
         )}
       </span>{" "}

@@ -23,8 +23,8 @@ export const Intro = ({ setMenuActive }) => {
         "My name you ask?",
         "Steve Shammah",
         "A Full Stack Web Developer",
-        "Enthuisiastic about tech",
-        "and all the bugs that come with it.",
+        "Enthusiastic about software development",
+        "and all the errors that come with it.",
         "...",
       ],
       backSpeed: 60,
@@ -102,11 +102,11 @@ export const Intro = ({ setMenuActive }) => {
             I Software Developer with experience and knowledge in designing and
             building websites with some of the latest technologies. <br /> Key
             skills include: <br /> <Star className='icon' /> Languages:
-            JavaScript, Python, SQL <br /> <Star className='icon' /> Database
-            systems: MYSQL <br />
+            JavaScript, Python, SQL. <br />
             <Star className='icon' /> Frameworks & Libraries: React JS,Django,
-            Flask, JQuery <br /> <Star className='icon' /> Others: Html, CSS,
-            Sass, Bootstrap.
+            Flask, JQuery <br /> <Star className='icon' /> Database systems:
+            MYSQL.
+            <br /> <Star className='icon' /> Others: HTML, CSS, Sass, Bootstrap.
           </p>
         </div>
 
