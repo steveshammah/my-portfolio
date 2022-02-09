@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .introContainer {
-  // background-color: red;
   background-color: $secondaryColor;
   height: auto;
   width: 100%;
@@ -9,8 +8,6 @@
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-
-  // margin-bottom: 150px;
 
   @include screen-size(phone) {
     // height: 150vh;
@@ -62,6 +59,7 @@
         width: 230px;
         border-radius: 50%;
         object-fit: cover;
+        margin-bottom: 20px;
 
         @include screen-size(phone) {
           height: 270px;
@@ -73,6 +71,7 @@
         width: 80%;
         line-height: 25px;
         text-align: center;
+        margin-bottom: 20px;
 
         h2 {
           font-size: 2rem;
@@ -113,6 +112,7 @@
             background-color: $mainColor;
             color: whitesmoke;
             position: relative;
+            margin-bottom: 20px;
 
             &:hover {
               background-color: $mainTextColor;
@@ -178,14 +178,14 @@
     background-color: $mainColor;
     color: $mainTextColor;
 
-    @include screen-size(desktop) {
-      height: 30vh;
-    }
-    @include screen-size(tablet) {
-      min-height: 60vh;
-    }
     @include screen-size(phone) {
       height: 90vh;
+    }
+    @include screen-size(tablet) {
+      min-height: 50vh;
+    }
+    @include screen-size(desktop) {
+      height: 30vh;
     }
 
     .container {

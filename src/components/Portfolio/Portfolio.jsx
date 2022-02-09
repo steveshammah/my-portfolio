@@ -1,5 +1,5 @@
 import "./Portfolio.scss";
-import { Projects } from "./Projects";
+import { AllProjects } from "./AllProjects";
 import { Experience } from "./Experience";
 import { useState } from "react";
 
@@ -25,7 +25,7 @@ export const Portfolio = ({ setMenuActive, menuActive }) => {
         )}
       </span>{" "}
       {projectView ? (
-        <Projects
+        <AllProjects
           menuActive={menuActive}
           setMenuActive={setMenuActive}
           setProjectView={setProjectView}

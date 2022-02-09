@@ -100,9 +100,9 @@ export const Intro = ({ setMenuActive }) => {
           </div>
           <p>
             I Software Developer with experience and knowledge in designing and
-            building websites with some of the latest technologies. <br /> Key
-            skills include: <br /> <Star className='icon' /> Languages:
-            JavaScript, Python, SQL. <br />
+            building web applications with some of the latest technologies.{" "}
+            <br /> Key skills include: <br /> <Star className='icon' />{" "}
+            Languages: JavaScript, Python, SQL. <br />
             <Star className='icon' /> Frameworks & Libraries: React JS,Django,
             Flask, JQuery <br /> <Star className='icon' /> Database systems:
             MYSQL.

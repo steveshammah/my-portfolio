@@ -2,9 +2,9 @@ import "./Portfolio.scss";
 import { useState, useEffect } from "react";
 
 export const Experience = ({ setMenuActive }) => {
-  const [activeYear, setActiveYear] = useState("2020");
+  const [activeYear, setActiveYear] = useState("Present");
   const [activeJob, setActiveJob] = useState([]);
-  const workYears = ["2022", "2020", "2017"];
+  const workYears = ["Present", "2022", "2020", "2017"];
 
   useEffect(() => {
     setJob();
@@ -14,6 +14,17 @@ export const Experience = ({ setMenuActive }) => {
 
   //   Jobs Object
   const jobs = [
+    {
+      company: "Savannah Informatics Ltd",
+      joinDate: "February 2022",
+      leaveDate: "Present",
+      role: "Frontend Engineer",
+      desc: [
+        " Reconciled group and individual renewal rates based on information provided by the Underwriters and actuarial/pricing department using the organisation’s core system. The process generates invoices for finance approval.",
+        " Resolved erroneous member problems, by providing support to staff who are directly in contact with customers and relied on information accessible by our department.",
+        " Onboard members to their respective schemes and with their agreed upon benefits and sub-benefits within stipulated TAT.",
+      ],
+    },
     {
       company: "Resolution Insurance Ltd",
       joinDate: "July 2020",
@@ -95,12 +106,12 @@ export const Experience = ({ setMenuActive }) => {
 
                 <span className='work-period'>
                   From
-                  <i>{item.joinDate} </i> to
+                  <i>{item.joinDate} </i> To
                   <i> {item.leaveDate}</i>{" "}
                 </span>
               </div>
               <div className='job-description'>
-                <h3>What I did...</h3>
+                <h3>Key responsibilities: </h3>
                 <ul>
                   {item.desc.map((info) => {
                     return <li key={info}>{info}</li>;
