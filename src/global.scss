@@ -24,9 +24,8 @@ html {
 .app {
   > .sections {
     scroll-snap-align: start;
-    // background-color: lime;
   }
-
+  
   section {
     margin-top: 0;
     scrollbar-width: none;

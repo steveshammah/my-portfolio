@@ -11,6 +11,7 @@ import {
 import CV from "./CV.pdf";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
+import { images } from "./images";
 
 export const Intro = ({ setMenuActive }) => {
   const textRef = useRef();
@@ -22,15 +23,14 @@ export const Intro = ({ setMenuActive }) => {
         "Hi",
         "My name you ask?",
         "Steve Shammah",
-        "A Full Stack Web Developer",
-        "Enthusiastic about software development",
+        "A Software Engineer",
+        "Enthusiastic about software development process",
         "and all the errors that come with it.",
         "...",
       ],
       backSpeed: 60,
       startDelay: 500,
     });
-    return () => {};
   }, []);
 
   const age = new Date().getFullYear() - 1996;
@@ -66,7 +66,7 @@ export const Intro = ({ setMenuActive }) => {
               </a>{" "}
               |
               <a
-                href={`https://github.com/Shammah08`}
+                href={`https://github.com/steveshammah`}
                 target='_blank'
                 rel='noreferrer'
                 title='GitHub'>
@@ -82,34 +82,61 @@ export const Intro = ({ setMenuActive }) => {
               </a>
             </div>
           </div>
+
+              <a href='#about'>
+          <ArrowDropDown className='icon arrow-down' />
+        </a>
         </div>
       </div>
-      <div className='rightContainer'>
-        <div className='container'>
-          <div className='meta-data'>
-            <h3>Personal Details</h3>
-            <span>
-              <h5>Residence:</h5> <h5>Kenya</h5>
+      <div className='rightContainer' id="about">
+        <div className="container">
+       
+      
+     
+          <div className="card">
+            
+            
+            <h2 className='title'>Personal Information</h2>
+            <div className="card-body">
+            <div className='meta-data'>
+           <span>
+             <strong>Residence:</strong> <span>Kenya</span>
             </span>
-            <span>
-              <h5>City:</h5> <h5>Nairobi</h5>
+           <span>
+             <strong>City:</strong> <span>Nairobi</span>
             </span>
-            <span>
-              <h5>Age:</h5> <h5>{age}</h5>
-            </span>
+           <span>
+              <strong>Age:</strong> <span>{age}</span>
+           </span>
+            </div>
+    
+              <div className="meta-text">
+              <p>
+                I am a self-taught developer and have a passion for learning new things.
+                Some of the technologies I have worked with include the below:
+                </p>
+                   <p>Currently I work at <a href={'https://www.savannahinformatics.com'} target={'_blank'} rel={'noreferrer'}>
+                Savannah Informatics 
+              </a> {' '}
+                 as a Frontend Engineer.
+                Part of a larger team that is currenlty engaged in building frontends for all the companies' web applications using Js, Typescript, React & Next Js.</p>
+           </div>
+            </div>
           </div>
-          <p>
-            I Software Developer with experience and knowledge in designing and
-            building web applications with some of the latest technologies.{" "}
-            <br /> Key skills include: <br /> <Star className='icon' />{" "}
-            Languages: JavaScript, Python, SQL. <br />
-            <Star className='icon' /> Frameworks & Libraries: React JS,Django,
-            Flask, JQuery <br /> <Star className='icon' /> Database systems:
-            MYSQL.
-            <br /> <Star className='icon' /> Others: HTML, CSS, Sass, Bootstrap.
-          </p>
-        </div>
+          
 
+              <div className="tech-stack">
+            {images.map(({ label, img }, index) => (
+              <div>
+              <img src={img} alt="avatar" key={index} className='tech-image' title={label} /> 
+              <span>{label}</span>
+              </div>
+            ))}
+            
+            </div>
+
+     </div>
+  
         <a href='#portfolio'>
           <ArrowDropDown className='icon' />
         </a>
@@ -117,3 +144,5 @@ export const Intro = ({ setMenuActive }) => {
     </section>
   );
 };
+
+

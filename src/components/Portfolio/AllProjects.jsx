@@ -1,39 +1,35 @@
-import ProjectDetails from "./ProjectContainer";
 import "./Portfolio.scss";
 import { GitHub, Public } from "@material-ui/icons";
-import { useState } from "react";
 
 export const AllProjects = ({ setMenuActive }) => {
-  const [activeProject, setActiveProject] = useState("");
+  
   const projects = [
     {
       _name: "goodapp",
       name: "The Good App",
       stack: ["HTML", "Sass", "JavaScript", "React", "React Icons"],
       image: "",
-      about: "An application model of an agency. ",
-      desc: "An application model of an agency. Description",
+      about: "An application made for a media agency.  ",
       git: "thegoodapp",
-      url: "thecompanyke.netlify.app",
+      url: "uat-tgc.netlify.app",
     },
     {
       _name: "impala",
       name: "Impala Rugby App",
       stack: ["HTML", "Sass", "JavaScript", "React", "Material UI"],
       image: "",
-      about: "A sports team website",
-      desc: "An application model of an agency. Description",
-      git: "",
-      url: "impalarugby.netlify.app",
+      about: "A sports team web application for the team's content management.",
+      
+      git: "impala-rugby",
+      url: "impalarugbyke.netlify.app",
     },
     {
-      _name: "portfolio",
-      name: "My Portfolio",
-      stack: ["HTML", "Sass", "JavaScript", "React", "Material UI"],
+      _name: "react_native",
+      name: "React Native App",
+      stack: ["React", "React Native", "JavaScript", 'Expo Cli'],
       image: "",
-      about: "This is my personal portfolio",
-      desc: "An application model of an agency. Description",
-      git: "my-portfolio",
+      about: "This is a cross platform mobile app. A follow up of the Good App.",
+      git: "glowing-barnacle",
       url: "",
     },
     {
@@ -41,8 +37,8 @@ export const AllProjects = ({ setMenuActive }) => {
       name: "The Farm",
       stack: ["HTML", "CSS", "Python", "Flask", "JavaScript", "MySQL"],
       image: "",
-      about: "This a chicken management system application.",
-      desc: "An application model of an agency. Description",
+      about: "This a chicken business management system application. For staff and product management.",
+      
       git: "theFarm",
       url: "",
     },
@@ -52,8 +48,8 @@ export const AllProjects = ({ setMenuActive }) => {
       stack: ["HTML", "CSS", "Python", "Flask", "JavaScript", "MySQL"],
       image: "",
       about:
-        "This is my personal blog used to document part of my learning process.",
-      desc: "An application model of an agency. Description",
+        "This is my personal blog for documenting part of my learning process.",
+      
       git: "blog-2.0",
       url: "",
     },
@@ -76,16 +72,13 @@ export const AllProjects = ({ setMenuActive }) => {
       id='portfolio'
       onClick={() => setMenuActive(false)}>
       <div className='projectsContainer'>
-        <ProjectDetails
-          activeProject={activeProject}
-          setActiveProject={setActiveProject}
-        />
+     
         {projects.map((project) => {
           return (
             <div
               className='project'
               key={project.name}
-              onClick={() => setActiveProject(project)}>
+            >
               <h3>{project.name}</h3>
               <p>{project.about}</p>
               <h4>Technologies used:</h4>

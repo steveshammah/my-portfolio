@@ -83,8 +83,7 @@ export const Experience = ({ setMenuActive }) => {
         {workYears.map((year) => (
           <span
             onClick={handleClick}
-            // eslint-disable-next-line
-            className={year == activeYear ? "active" : ""}
+            className={year === activeYear ? "active" : ""}
             key={year}>
             {year}
           </span>
