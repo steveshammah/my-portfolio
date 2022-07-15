@@ -5,7 +5,6 @@ import {
   GitHub,
   ArrowDropDown,
   GetApp,
-  Star,
   LinkedIn,
 } from "@material-ui/icons";
 import CV from "./CV.pdf";
@@ -24,7 +23,7 @@ export const Intro = ({ setMenuActive }) => {
         "My name you ask?",
         "Steve Shammah",
         "A Software Engineer",
-        "Enthusiastic about software development process",
+        "Enthusiastic about software development",
         "and all the errors that come with it.",
         "...",
       ],
