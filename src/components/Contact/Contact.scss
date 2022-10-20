@@ -2,59 +2,60 @@
 
 .contactMe {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 80px 20px 10px 20px;
-  width: 100%;
-  margin-top: 80px;
+
+  // width: 100%;
+  height: auto;
+  padding: 5px;
 
   @include screen-size(phone) {
-    min-height: auto;
+    min-height: 80vh;
+    flex-direction: column;
   }
 
   @include screen-size(tablet) {
-    height: 90vh;
+    height: 80vh;
   }
 
-  @include screen-size(desktop) {
-    height: 80vh !important;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  > p {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    line-height: 30px;
-    width: 63%;
-
-    @include screen-size(phone) {
-      width: 100%;
-      font-size: 1rem;
-    }
-  }
-
-  .formContainer {
+  .get-in-touch {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    // background: red;
+
+    h2 {
+      font-size: 2rem;
+    }
+    > p {
+      font-size: 1rem;
+      letter-spacing: 2px;
+      line-height: 30px;
+      width: 100%;
+
+      @include screen-size(phone) {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    align-items: center;
-    height: 80%;
-    width: 90%;
+    width: 100%;
 
     @include screen-size(phone) {
-      height: 100%;
+      flex-direction: column-reverse;
     }
 
-    .formText {
+    .contact-info {
       display: flex;
       align-items: center;
-      justify-content: center;
-      height: 80%;
+      justify-content: space-around;
       width: 100%;
+      flex: 1;
 
       padding: 10px;
 
@@ -69,6 +70,9 @@
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
+        box-shadow: 1px 1px 1px 1px rgb(161, 159, 159);
+        border-radius: 6px;
+        padding: 5px;
 
         @include screen-size(phone) {
           font-size: 1rem;
@@ -78,14 +82,13 @@
         }
 
         @include screen-size(tablet) {
-          font-size: 1rem;
           width: 90%;
-          height: 80%;
+          height: 150px;
         }
         @include screen-size(desktop) {
           width: 25%;
-          height: 60%;
-          font-size: 1.2rem;
+          // width: auto;
+          // height: 60%;
         }
 
         .icon {
@@ -93,99 +96,201 @@
         }
         h5 {
           text-transform: uppercase;
+          font-size: 1.2rem;
         }
         p {
           color: $mainColor;
-          margin-top: 10px;
+          font-size: 1rem;
         }
       }
     }
-    form {
+
+    .formContainer {
       display: flex;
-      justify-content: space-around;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      width: 80%;
-      height: 80%;
+      flex: 1;
+      padding: 5px;
+      height: 80vh;
+      margin-top: 20px;
 
       @include screen-size(phone) {
-        flex-direction: column;
-        width: 100%;
         height: 100%;
       }
-      > span {
+
+      form {
         display: flex;
-        align-items: flex-start;
         justify-content: center;
         flex-direction: column;
+        align-items: center;
+        width: 80%;
+        background-color: $mainColor;
+        border-radius: 6px;
+        padding: 20px;
 
         @include screen-size(phone) {
-          width: 80%;
-          height: 50%;
+          flex-direction: column;
+          width: 100%;
+          height: 90%;
         }
+        .inputs {
+          display: flex;
+          // align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          width: 60%;
+          // height: auto;
 
-        @include screen-size(tablet) {
-          width: 40%;
-          height: 40%;
-        }
-
-        > input {
-          width: 90%;
-          border: none;
-          border-bottom: 1px solid #333;
-          outline: none;
-          font-size: 1rem;
-          font-weight: 500;
-          padding: 5px 20px;
-          margin: 5px;
+          @include screen-size(phone) {
+            width: 80%;
+            height: 50%;
+          }
 
           @include screen-size(tablet) {
-            height: 30px;
-            font-size: 0.8rem;
+            width: 80%;
+          }
+          @include screen-size(desktop) {
+            width: 60%;
+          }
+
+          > input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #333;
+            outline: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 20px 20px;
+            margin: 5px;
+            border-radius: 4px;
+
+            @include screen-size(tablet) {
+              height: 30px;
+              font-size: 0.8rem;
+            }
+          }
+        }
+        .text-area {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
+          align-items: flex-end;
+          width: 60%;
+          overflow: hidden;
+
+          @include screen-size(phone) {
+            width: 100%;
+          }
+
+          textarea {
+            // border-radius: 10px;
+            border: 1px solid #333;
+            margin-top: 30px;
+            padding: 10px;
+            font-size: 18px;
+            outline: none;
+            width: 100%;
+            height: 150px;
+            border-radius: 4px;
+          }
+
+          .button-alerts {
+            padding: 10px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            @include screen-size(phone) {
+              flex-direction: column;
+            }
+
+            button {
+              height: 40px;
+              width: 150px;
+              border: 1px solid $secondaryColor;
+              border-radius: 4px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              outline: none;
+              border: none;
+              margin-top: 30px;
+              cursor: pointer;
+              // background-color: $secondaryTextColor;
+              color: $mainColor;
+
+              &.loading {
+                background: rgb(161, 159, 159);
+                cursor: progress;
+              }
+            }
+            .notification {
+              width: 300px;
+              height: 100px;
+              animation: popup 5s forwards;
+              display: none;
+              border-radius: 4px;
+              transition: all ease-in-out;
+              box-shadow: 1px 2px 2px 2px #333;
+              background-color: $secondaryColor;
+              animation: popup 5s forwards;
+              // position: absolute;
+              // z-index: 100;
+
+              &.success {
+                display: flex;
+              }
+
+              &.error {
+                display: flex;
+              }
+
+              .border {
+                width: 12px;
+                height: 100%;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+
+                &.error {
+                  background: red;
+                }
+                &.success {
+                  background-color: green;
+                }
+              }
+              .message {
+                padding: 2px;
+                min-height: 70px;
+                display: flex;
+                // flex-direction: column;
+                align-items: center;
+                .icon {
+                  color: green;
+                  font-size: 2.2rem;
+                }
+                > span {
+                  padding: 5px;
+                  color: black;
+                }
+              }
+            }
           }
         }
       }
-      div {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: space-between;
-        align-items: flex-end;
-        width: 70%;
-        overflow: hidden;
-
-        @include screen-size(phone) {
-          width: 100%;
-        }
-
-        textarea {
-          // border-radius: 10px;
-          border: 1px solid #333;
-          margin-top: 50px;
-          padding: 10px;
-          font-size: 18px;
-          outline: none;
-          width: 100%;
-          height: 80%;
-        }
-
-        button {
-          height: 50px;
-          width: 150px;
-          // border-radius: 10px;
-          outline: none;
-          border: none;
-          margin-top: 30px;
-          cursor: pointer;
-          background-color: $mainColor;
-          color: $mainTextColor;
-        }
-        > span {
-          margin-top: 5px;
-          color: green;
-          padding: 10px;
-          // border-radius: 10px;
-        }
-      }
     }
+  }
+}
+
+@keyframes popup {
+  from {
+    display: block;
+    // position: relative;
+  }
+  to {
+    display: hidden;
+    bottom: -100;
   }
 }
