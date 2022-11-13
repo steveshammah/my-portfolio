@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
 
-
   .leftContainer {
     width: 100% !important;
     height: 90vh;
@@ -48,7 +47,7 @@
         top: 15%;
       }
 
-        @include screen-size(tablet) {
+      @include screen-size(tablet) {
         top: 40%;
       }
 
@@ -56,11 +55,10 @@
         top: 30%;
       }
       img {
-      
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 20px;
-        
+
         @include screen-size(phone) {
           height: 270px;
           width: 270px;
@@ -68,7 +66,6 @@
         @include screen-size(tablet) {
           height: 300px;
           width: 300px;
-          
         }
         @include screen-size(desktop) {
           height: 230px;
@@ -173,26 +170,26 @@
         }
       }
 
-       .arrow-down {
-      font-size: 4rem;
-      color: $tertiaryColor;
-      cursor: pointer;
+      .arrow-down {
+        font-size: 4rem;
+        color: $tertiaryColor;
+        cursor: pointer;
 
-      animation: zoom 1.5s infinite;
-      transition: ease-in-out;
+        animation: zoom 1.5s infinite;
+        transition: ease-in-out;
 
-      @keyframes zoom {
-        0% {
-          transform: scale(1.4);
-        }
-        50% {
-          transform: scale(1);
-        }
-        100% {
-          transform: scale(1.3);
+        @keyframes zoom {
+          0% {
+            transform: scale(1.4);
+          }
+          50% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(1.3);
+          }
         }
       }
-    }
     }
   }
 
@@ -226,127 +223,119 @@
       @include screen-size(phone) {
         flex-direction: column;
       }
-.card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 20px;
-  padding: 20px;
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        padding: 20px;
 
-  
-  
-    .title {
-      padding: 10px;
-      text-transform: uppercase;
-      font-weight: 700;
-      cursor: pointer;
-      color: $mainColor;
-      text-align: center;
-      min-width: 250px;
-      margin: 20px;
-      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-
-
-      @include screen-size(phone) {
-        font-size: 1.2rem;
-      }
-      @include screen-size(tablet) {
-        font-size: 1.8rem;
-      }
-
-      @include screen-size(desktop) {
-        font-size: 2rem;
-      }
-    }
-  
-  
-  .card-body{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-    flex-wrap: wrap;
-    height: auto;
-
-
-    .meta-data{
-      // padding: 20px;
-      // width: 20%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      span{
-        margin-right: 20px;
-        strong{
-          font-weight: 600;
-        }
-        
-        span{
-          font-size: 1rem;
+        .title {
+          padding: 10px;
+          text-transform: uppercase;
+          font-weight: 700;
+          cursor: pointer;
           color: $mainColor;
-          margin-left: 10px;
-          font-weight: 400;
-     
+          text-align: center;
+          min-width: 250px;
+          margin: 20px;
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 
+          @include screen-size(phone) {
+            font-size: 1.2rem;
+          }
+          @include screen-size(tablet) {
+            font-size: 1.8rem;
+          }
+
+          @include screen-size(desktop) {
+            font-size: 2rem;
+          }
+        }
+
+        .card-body {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          align-items: center;
+          flex-wrap: wrap;
+          height: auto;
+
+          .meta-data {
+            // padding: 20px;
+            // width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+              margin-right: 20px;
+              strong {
+                font-weight: 600;
+              }
+
+              span {
+                font-size: 1rem;
+                color: $mainColor;
+                margin-left: 10px;
+                font-weight: 400;
+              }
+            }
+          }
+
+          .meta-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+
+            @include screen-size(phone) {
+              flex-direction: column;
+            }
+          }
+
+          a {
+            color: $mainColor;
+            text-decoration: underline solid 1px $mainColor;
+          }
         }
       }
-    }
+      .tech-stack {
+        // margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+        background-color: whitesmoke;
+        width: 90%;
 
-  .meta-text{
-    display: flex;
-    align-items: center;
-    flex: 1;
-
-    @include screen-size(phone) {
-      flex-direction: column;
-    }
-  }
-
-
-  a{
-    color: $mainColor;
-    text-decoration: underline solid 1px $mainColor;; 
-  }
-  }
-}
-       .tech-stack{
-      // margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-    flex-wrap: wrap;
-    height: auto;
-    background-color: whitesmoke;
-    width: 90%;
-
-        div{
+        div {
           display: flex;
           flex-direction: column;
           align-items: center;
 
+          .tech-image {
+            height: 50px;
+            width: 50px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin: 10px;
+            box-shadow: #333 0px 0px 10px;
+          }
 
-            .tech-image{
-    height: 50px;
-    width: 50px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    margin: 10px;
-    box-shadow: #333 0px 0px 10px;
-  }
-
-  span{
-    text-transform: capitalize;
-  }
+          span {
+            text-transform: capitalize;
+          }
         }
-  }
+      }
 
       p {
         line-height: 35px;
         letter-spacing: 2px;
-        padding: 20px;
-        width: 80%;
+        padding: 10px;
+        width: 60%;
         height: 80%;
         font-size: 1.2rem;
 
@@ -381,8 +370,5 @@
         }
       }
     }
-
   }
 }
-
-

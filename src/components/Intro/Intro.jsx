@@ -7,10 +7,10 @@ import {
   GetApp,
   LinkedIn,
 } from "@material-ui/icons";
-// import { Resume } from "../../../public/assets";
+import Resume from "./cv-dark.pdf";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
-// import { images } from "../../../public/assets/images";
+import avatar from "./cartoon-avatar.jpg";
 
 export const Intro = ({ setMenuActive }) => {
   const textRef = useRef();
@@ -21,9 +21,9 @@ export const Intro = ({ setMenuActive }) => {
       strings: [
         "Hello world 🌍",
         "Steve Shammah here",
-        "A Software Engineer",
-        "Familiar with the all the steps involved to bring software to life",
-        "Scroll further to see some of my work",
+        "This is a kind reminder",
+        "To declare variables 😁",
+        "and not war 🕊",
         "...",
       ],
       backSpeed: 60,
@@ -31,23 +31,21 @@ export const Intro = ({ setMenuActive }) => {
     });
   }, []);
 
-  const age = new Date().getFullYear() - 1996;
-
   return (
     <section className="introContainer" onClick={() => setMenuActive(false)}>
       <div className="leftContainer">
         <div className="backgroundContainer"></div>
 
         <div className="image">
-          {/* <img src={images[-1].img} alt="AVATAR" /> */}
+          <img src={avatar} alt="AVATAR" />
           <div className="introText">
-            <h2 ref={textRef}>|</h2>
+            <h2 ref={textRef}>{""}</h2>
           </div>
           <div className="nav-button">
             <a href="#contact">
               <button>Contact Me</button>
             </a>
-            <a href={"#resume"} download="Steve_shammah-CV">
+            <a href={"#resume"} download={Resume}>
               <button className="cv-download">
                 Resume <GetApp className="icon" />
               </button>
@@ -101,19 +99,12 @@ export const Intro = ({ setMenuActive }) => {
                 <span>
                   <strong>City:</strong> <span>Nairobi</span>
                 </span>
-                <span>
-                  <strong>Age:</strong> <span>{age}</span>
-                </span>
               </div>
 
               <div className="meta-text">
                 <p>
-                  I am a self-taught developer and have a passion for learning
-                  new things. Some of the technologies I have worked with
-                  include the below:
-                </p>
-                <p>
-                  Currently I work at{" "}
+                  I am a Software Engineer currently working as a{" "}
+                  <i>Frontend Developer</i> at{" "}
                   <a
                     href={"https://www.savannahinformatics.com"}
                     target={"_blank"}
@@ -121,28 +112,17 @@ export const Intro = ({ setMenuActive }) => {
                   >
                     Savannah Informatics
                   </a>{" "}
-                  as a Frontend Engineer. Part of a larger team that is
-                  currenlty engaged in building frontends for all the companies'
-                  web applications using Js, Typescript, React & Next Js.
+                  . Below are some of the projects I've worked on. <br />
+                  Feel free to reach out through email or other means if you'd
+                  like to have a chat.
+                  <br /> <br />
+                  <strong>
+                    <small>Shammah out 🙋</small>
+                  </strong>{" "}
                 </p>
               </div>
             </div>
           </div>
-
-          {/* <div className="tech-stack">
-            {images.map(({ label, img }, index) => (
-              <div key={index}>
-                <img
-                  src={img}
-                  alt="avatar"
-                  key={index}
-                  className="tech-image"
-                  title={label}
-                />
-                <span>{label}</span>
-              </div>
-            ))}
-          </div> */}
         </div>
 
         <a href="#portfolio">

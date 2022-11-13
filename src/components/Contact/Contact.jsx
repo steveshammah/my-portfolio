@@ -8,14 +8,12 @@ import {
   CheckCircle,
 } from "@material-ui/icons";
 
-import { useEffect, useRef, useState } from "react";
-
-// Email Config
-import emailjs from "emailjs-com";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const Contact = ({ setMenuActive }) => {
   const formRef = useRef();
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(undefined);
   const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,28 +21,33 @@ export const Contact = ({ setMenuActive }) => {
 
     emailjs
       .sendForm(
-        "service_44ckheh",
-        "template_ccxvu88",
+        process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
         formRef.current,
-        "user_sPKH6oZk84TwI8ATJjGGi"
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
       )
       .then(
-        (result) => {
+        (response) => {
           setLoading(false);
           setError(false);
           // Reset contact form
           formRef.current.reset();
         },
         (ApiError) => {
-          console.log(ApiError.text);
-          setLoading(false);
           setError(true);
+          setLoading(false);
         }
       );
   };
 
   return (
-    <section className="contactMe" onClick={() => setMenuActive(false)}>
+    <section
+      className="contactMe"
+      onClick={() => setMenuActive(false)}
+      style={{
+        marginTop: "30px",
+      }}
+    >
       <div className="get-in-touch">
         <h2>Get In Touch</h2>
         <p>
@@ -89,7 +92,14 @@ export const Contact = ({ setMenuActive }) => {
                     {/* Alert Border */}
                   </div>
 
-                  <div className="message">
+                  <div
+                    className="message"
+                    style={
+                      {
+                        // background: "red",
+                      }
+                    }
+                  >
                     {error === false && (
                       <>
                         <span>Thank you. Your message has been sent.</span>
