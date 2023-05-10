@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: "#2A3O3C"; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: Poppins, monospace;
+}
