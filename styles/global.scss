@@ -6,21 +6,7 @@ $secondaryTextColor: #242425;
 $backgroundColor: #ebf2f9;
 $mainFont: Poppins;
 
-*,
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-html {
-  scroll-behavior: smooth;
-  font-family: $mainFont;
-}
 
 .app {
   > .sections {
