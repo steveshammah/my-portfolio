@@ -3,7 +3,7 @@ import avatar from "@public/code-head.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-export const HomePage = () => {
+const Page = () => {
   return (
     <div className="flex flex-col w-full lg:flex-row  bg-no-repeat bg-cover  lg:h-[calc(100vh-120px)] h-screen">
       <div className="flex flex-1 items-center justify-center flex-grow h-full  place-items-center">
@@ -55,4 +55,4 @@ export const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Page;
