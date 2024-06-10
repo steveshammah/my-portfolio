@@ -1,9 +1,9 @@
 "use client";
 
-import { Contact } from "@components/Contact/Contact";
-import { MdLocationCity, MdMarkEmailRead } from "react-icons/md";
+import { Contact } from "@components/contact";
 import avatar from "@public/ranks.jpeg";
 import Image from "next/image";
+import Link from "next/link";
 import { FaUser } from "react-icons/fa";
 
 const Page = () => {
@@ -49,10 +49,47 @@ const Page = () => {
                   {new Date().getMinutes()}
                 </time>
               </div>
-              {/* <div className="chat-bubble">I hate you</div> */}
               <div className="chat-footer opacity-50">Seen</div>
             </div>
 
+            <div className="chat chat-start">
+              <div className="chat-image avatar">
+                <div className="w-10 rounded-full">
+                  <Image
+                    src={avatar.src}
+                    alt="AVATAR"
+                    width={20}
+                    height={20}
+                    className="lg:flex hidden rounded-full overflow-hidden shadow-md shadow-slate-50"
+                  />
+                </div>
+              </div>
+              <div className="chat-header">
+                Shammah
+                <time className="text-xs opacity-50 pl-1">
+                  {new Date().getHours()}
+                  {":"}
+                  {new Date().getMinutes()}
+                </time>
+              </div>
+              <div className="chat-bubble chat-bubble-accent">
+                {" "}
+                <span className="">
+                  Here's a
+                  <Link
+                    target="_blank"
+                    rel="noreferrer"
+                    href={
+                      "https://impala-rugby.vercel.app/squads/members/steve-shammah"
+                    }
+                    className="mx-2 underline font-semibold"
+                  >
+                    Fun fact
+                  </Link>
+                </span>
+              </div>
+              <div className="chat-footer opacity-50">Delivered</div>
+            </div>
             <div className="chat chat-start">
               <div className="chat-image avatar">
                 <div className="w-10 rounded-full">
