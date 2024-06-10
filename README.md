@@ -1,5 +1,3 @@
-My personal portfolio built in React JS.
+My personal portfolio website
 
-Languages Used: JavaScript, React, HTML, Sass
-
-Live Demo: https://steveshammah.netlify.app
+Languages Used: NextJs, React, HTML, Sass
