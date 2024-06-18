@@ -160,7 +160,7 @@ export const projects = [
     about:
       "A sports management system for staff, facility and resource monitoring and management. Serves as an input portal for team information to be visualized to the public on TakeOver Media. - Tech Lead",
     git: "",
-    url: "flairsports.co.ke",
+    url: "https://flairsports.co.ke",
   },
   {
     name: "TakeOver Media",
