@@ -52,7 +52,7 @@ const Page = () => {
               <div className="chat-footer opacity-50">Seen</div>
             </div>
 
-            <div className="chat chat-start">
+            {/* <div className="chat chat-start">
               <div className="chat-image avatar">
                 <div className="w-10 rounded-full">
                   <Image
@@ -89,7 +89,7 @@ const Page = () => {
                 </span>
               </div>
               <div className="chat-footer opacity-50">Delivered</div>
-            </div>
+            </div> */}
             <div className="chat chat-start">
               <div className="chat-image avatar">
                 <div className="w-10 rounded-full">
