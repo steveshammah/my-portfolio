@@ -5,32 +5,35 @@ import healthcloud from "@images/healthcloud.png";
 import deforestation from "@images/deforestation.png";
 import goodcompany from "@images/goodcompany.png";
 import nci from "@images/nci.png";
+import stratix from "@images/stratixdata.png";
+import naq from "@images/naq.png";
 
 export const jobs = [
   {
-    company: "Flair Sports",
-    joinDate: "Down Time",
+    company: "Stratix Data",
+    joinDate: "",
     leaveDate: "",
-    joinDateLong: "2023-06-01",
+    joinDateLong: "2025-11-01",
     leaveDateLong: "",
     location: "Onsite",
     role: "Tech Lead",
     desc: [
-      "Working with Tony Jerym - Backend Eng, to help improve the sports management landscape in Kenya and beyond with the sports management application; Flair",
+      "Working rugby clubs and rugby union to modernize sports management and competition tracking in the country",
     ],
   },
   {
     company: "Reznik Infrastructure Systems.",
     joinDate: "January 2024",
-    leaveDate: "",
+    leaveDate: "October 2025",
     joinDateLong: "2024-01-01",
-    leaveDateLong: "",
+    leaveDateLong: "2025-10-31",
     location: "Israel - Remote",
     role: "Software Engineer",
     desc: [
-      "Part of the Frontend team working on the core Web application - An Engineering project management application that tracks infrastructure projects, tasks and sub - tasks with their timelines, assignees and geographical locations (GIS, React, Prime, Styled Components)",
+      "Core frontend engineer for the flagship Engineering Project Management platform used to track infrastructure projects, finances, tasks, and subtasks across timelines, teams, and geographical locations.",
     ],
   },
+
   {
     company: "Savannah Informatics Ltd",
     joinDate: "February 2022",
@@ -49,34 +52,44 @@ export const jobs = [
     ],
   },
   {
-    company: "Resolution Insurance Ltd",
-    joinDate: "April 2019",
-    joinDateLong: "2019-05-15",
-    leaveDateLong: "2024-02-28",
-    leaveDate: "January 2022",
-    role: "Claims/Underwriting Executive",
-    location: "Nairobi - Onsite",
-    desc: [
-      "Reconciled group and individual renewal rates based on information provided by the Underwriters and actuarial/pricing department using the organisation’s core system. The process generates invoices for finance approval.",
-      "Evaluated claims forms and related documentation to determine insurance coverage and validity.",
-      "Investigated and analyzed suspicious and potentially fraudulent insurance claims, reporting to relevant authorities.",
-      "Entered member claims and invoices into the system for assessment by adjudicators, facilitating further payment or decline decisions by the finance department.",
-    ],
+    company: "Takeover Ke",
+    joinDate: "2021",
+    leaveDate: "",
+    joinDateLong: "2021-12-01",
+    leaveDateLong: "",
+    location: "Onsite",
+    role: "Tech Lead",
+    desc: ["Working with Tony Jerym - Backend Eng, to buil"],
   },
-  {
-    company: "Fashtech Ltd",
-    joinDate: "August 2017",
-    leaveDate: "December 2017",
-    joinDateLong: "2017-08-6",
-    leaveDateLong: "2017-12-18",
-    role: "IT Technician - Internship",
-    location: "Nairobi - Onsite",
-    desc: [
-      "Developed expertise in diagnosing and troubleshooting computer hardware and software issues.",
-      "Performed repairs on computers, laptops, and other peripheral hardware.",
-      "Set up Local Area Networks (LAN) and configured routing systems.",
-    ],
-  },
+  // {
+  //   company: "Resolution Insurance Ltd",
+  //   joinDate: "April 2019",
+  //   joinDateLong: "2019-05-15",
+  //   leaveDateLong: "2024-02-28",
+  //   leaveDate: "January 2022",
+  //   role: "Claims/Underwriting Executive",
+  //   location: "Nairobi - Onsite",
+  //   desc: [
+  //     "Reconciled group and individual renewal rates based on information provided by the Underwriters and actuarial/pricing department using the organisation’s core system. The process generates invoices for finance approval.",
+  //     "Evaluated claims forms and related documentation to determine insurance coverage and validity.",
+  //     "Investigated and analyzed suspicious and potentially fraudulent insurance claims, reporting to relevant authorities.",
+  //     "Entered member claims and invoices into the system for assessment by adjudicators, facilitating further payment or decline decisions by the finance department.",
+  //   ],
+  // },
+  // {
+  //   company: "Fashtech Ltd",
+  //   joinDate: "August 2017",
+  //   leaveDate: "December 2017",
+  //   joinDateLong: "2017-08-6",
+  //   leaveDateLong: "2017-12-18",
+  //   role: "IT Technician - Internship",
+  //   location: "Nairobi - Onsite",
+  //   desc: [
+  //     "Developed expertise in diagnosing and troubleshooting computer hardware and software issues.",
+  //     "Performed repairs on computers, laptops, and other peripheral hardware.",
+  //     "Set up Local Area Networks (LAN) and configured routing systems.",
+  //   ],
+  // },
 ];
 
 export const links = [
@@ -144,24 +157,35 @@ export const links = [
 
 export const projects = [
   {
-    name: "Flair Sports",
-    stack: [
-      "CRM",
-      "Tailwind",
-      "Typescript",
-      "NextJs",
-      "Firebase",
-      "ShadCn",
-      "React",
-      "Django",
-      "MySql",
-    ],
-    image: flair,
+    name: "Stratix Data",
+    stack: ["CRM", "Tailwind", "Typescript", "NextJs", "ShadCn", "React"],
+    image: stratix,
     about:
-      "A sports management system for staff, facility and resource monitoring and management. Serves as an input portal for team information to be visualized to the public on TakeOver Media. - Tech Lead",
+      "A sports management system for staff, facility and resource monitoring and management. Serves as an information portal for sports teams and Unions. - Tech Lead",
     git: "",
-    url: "https://flairsports.co.ke",
+    url: "https://app.stratixdata.com",
   },
+  {
+    name: "Nairobi Air Quality",
+    stack: ["Node", "Postgres", "Firebase", "Prisma"],
+    image: naq,
+    about:
+      "A real-time platform for air quality monitoring across Nairobi to protect public health and environment through accurate data, research, and community engagement",
+    git: "",
+    url: "https://airquality.nairobi.go.ke/",
+  },
+  {
+    name: "NCI Kenya - Portal",
+    version: "0.0.1",
+    stack: ["CSS", "NextJs", "K8s", "TypeScript", "Wagtail", "CMS", "GitLab"],
+    image: nci,
+    about:
+      "A health navigator for people affected by cancer in partnership with the National Cancer Institute of Kenya to help make accessible valuable media content and locations to nearby cancer centers - Frontend Lead",
+
+    git: "",
+    url: "https://portal.ncikenya.go.ke/en",
+  },
+
   {
     name: "TakeOver Media",
     stack: [
@@ -178,19 +202,9 @@ export const projects = [
     about:
       "A media outlet and e-commerce platform for sports teams powered by Flair. - Tech Lead",
     git: "",
-    url: "https://takeover-sports.vercel.app",
+    url: "https://takeover.co.ke",
   },
-  {
-    name: "NCI Kenya - Portal",
-    version: "0.0.1",
-    stack: ["CSS", "NextJs", "K8s", "TypeScript", "Wagtail", "CMS", "GitLab"],
-    image: nci,
-    about:
-      "A health navigator for people affected by cancer in partnership with the National Cancer Institute of Kenya to help make accessible valuable media content and locations to nearby cancer centers - Frontend Lead",
 
-    git: "",
-    url: "https://portal.ncikenya.go.ke/en",
-  },
   {
     name: "HealthCloud API ",
     version: "1.0.0",
@@ -208,7 +222,7 @@ export const projects = [
       "An application aimed at exposing powerful internal APIs that power Slade360 an extensive healthcare ecosystem serving patients, medical providers and insurance companies. - Frontend Lead. ",
 
     git: "",
-    url: "https://healthcloud.sh",
+    url: "https://web.healthcloud.sh",
   },
   {
     name: "The Good App",

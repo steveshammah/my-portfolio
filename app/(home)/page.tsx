@@ -19,13 +19,13 @@ const HomePage = () => {
       <div className="flex items-center justify-center p-8  place-items-center">
         <div className="flex flex-col justify-center lg:items-start text-center items-center">
           <h1 className={` text-[1.4rem] lg:w-[40vw] w-full `}>
-            Hi, I'm Shammah. A Software Engineer based in Nairobi,
-            Kenya&nbsp;🇰🇪. I am currently working in the Frontend domain using
-            Typescript and ReactJs for most of the projects i'm building.
+            Hi, I'm Shammah. I'm a Software Engineer with 5+ years of experience
+            based in Nairobi, Kenya&nbsp;🇰🇪. I specialize in building modern web
+            applications.
           </h1>
 
           <small className="w-full py-2">
-            I occasionally get my feet wet with some python and Django.
+            I also have backend experience with Node and Python.
           </small>
           <div className="flex w-full justify-center items-center btn-group mt-8 mb-4">
             <Link
