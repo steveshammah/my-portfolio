@@ -30,11 +30,11 @@ export default function ExperienceTimeLapse() {
 
   return (
     <div className="flex lg:ml-[420px] items-center justify-center h-full w-full lg:w-[80%] overflow-y-auto min-h-fit py-28">
-      <div className="flex flex-col overflow-y-auto items-center gap-12 min-h-fit">
+      <div className="flex justify-start flex-col overflow-y-auto items-center gap-12 min-h-fit w-full">
         {jobs?.map((exp: any, index: number) => (
           <div
             key={`${index}`}
-            className="flex-1 relative flex pb-8 last:pb-0
+            className="flex-1 relative flex pb-8 last:pb-0 w-full
             h-auto flex-col items-baseline gap-6 md:flex-row md:gap-12"
           >
             <div className="absolute inset-0 flex w-6 items-center justify-center">
@@ -68,7 +68,7 @@ export default function ExperienceTimeLapse() {
                           duration(exp.joinDateLong, exp.leaveDateLong)}
                       </small>
                     </div>
-                    <div className="job-description">
+                    {/* <div className="job-description">
                       <h3 className="text-lg font-semibold my-4">
                         Experience:{" "}
                       </h3>
@@ -81,7 +81,7 @@ export default function ExperienceTimeLapse() {
                           );
                         })}
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

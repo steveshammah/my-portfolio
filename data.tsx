@@ -7,6 +7,7 @@ import goodcompany from "@images/goodcompany.png";
 import nci from "@images/nci.png";
 import stratix from "@images/stratixdata.png";
 import naq from "@images/naq.png";
+import tripflick from "@images/tripflicks.png";
 
 export const jobs = [
   {
@@ -17,9 +18,36 @@ export const jobs = [
     leaveDateLong: "",
     location: "Onsite",
     role: "Tech Lead",
-    desc: [
-      "Working rugby clubs and rugby union to modernize sports management and competition tracking in the country",
-    ],
+    desc:[]
+    // desc: [
+    //   "Working rugby clubs and rugby union to modernize sports management and competition tracking in the country",
+    // ],
+  },
+   {
+    company: "Nairobi County Government.",
+    joinDate: "October 2025",
+    leaveDate: "January 2026",
+    joinDateLong: "2025-10-01",
+    leaveDateLong: "2026-01-05",
+    location: "Nairobi Kenya",
+    role: "Backend Engineer",
+    desc:[]
+    // desc: [
+    //   "Core frontend engineer for the flagship Engineering Project Management platform used to track infrastructure projects, finances, tasks, and subtasks across timelines, teams, and geographical locations.",
+    // ],
+  },
+     {
+    company: "Tripflick Travels.",
+    joinDate: "November 2025",
+    leaveDate: "January 2026",
+    joinDateLong: "2025-10-15",
+    leaveDateLong: "2026-01-10",
+    location: "Nairobi Kenya",
+    role: "Technical Lead",
+    desc:[]
+    // desc: [
+    //   "Core frontend engineer for the flagship Engineering Project Management platform used to track infrastructure projects, finances, tasks, and subtasks across timelines, teams, and geographical locations.",
+    // ],
   },
   {
     company: "Reznik Infrastructure Systems.",
@@ -29,9 +57,10 @@ export const jobs = [
     leaveDateLong: "2025-10-31",
     location: "Israel - Remote",
     role: "Software Engineer",
-    desc: [
-      "Core frontend engineer for the flagship Engineering Project Management platform used to track infrastructure projects, finances, tasks, and subtasks across timelines, teams, and geographical locations.",
-    ],
+    desc:[]
+    // desc: [
+    //   "Core frontend engineer for the flagship Engineering Project Management platform used to track infrastructure projects, finances, tasks, and subtasks across timelines, teams, and geographical locations.",
+    // ],
   },
 
   {
@@ -42,14 +71,15 @@ export const jobs = [
     leaveDateLong: "2024-02-08",
     role: "Software Engineer",
     location: "Nairobi - Hybrid",
+    desc:[]
 
-    desc: [
-      "Led the development and contributed in the design of the HealthCloud API- A knowledge base on how Slade360 works and how to build on top of the APIs and NCI Portal - A health navigator for people affected by cancer in partnership with the National Cancer Institute of Kenya. (Typescript, NextJs, GCP, K8s, Tailwind)",
-      "Involved in re-platforming of some the existing fronted infrastructure from Google Cloud Run (GCR) to Google Kubernetes Engine (GKE) resulting in a Net reduced infrastructure cost across the company of about 50%.(Typescript NextJs, GCP, Sentry, MsClarity)",
-      "Rewrote the internal Call Center Application that integrates with AfricasTalking Voice API to a maintainable and cost efficient stack i.e From Monorepo and GCR to Standalone NextJs and GKE (Nx, NextJs, Typescript, Tailwind, Docker, GCP)",
-      "Part of the Core Slade360 Team that maintained and deployed the frontend of the Electronic Medical Records system (Javascript, AngularJs, Less, Grunt, Webpack, Ansible, Gitlab) ",
-      "Trained and helped with the onboarding of new Frontend hires and interns",
-    ],
+    // desc: [
+    //   "Led the development and contributed in the design of the HealthCloud API- A knowledge base on how Slade360 works and how to build on top of the APIs and NCI Portal - A health navigator for people affected by cancer in partnership with the National Cancer Institute of Kenya. (Typescript, NextJs, GCP, K8s, Tailwind)",
+    //   "Involved in re-platforming of some the existing fronted infrastructure from Google Cloud Run (GCR) to Google Kubernetes Engine (GKE) resulting in a Net reduced infrastructure cost across the company of about 50%.(Typescript NextJs, GCP, Sentry, MsClarity)",
+    //   "Rewrote the internal Call Center Application that integrates with AfricasTalking Voice API to a maintainable and cost efficient stack i.e From Monorepo and GCR to Standalone NextJs and GKE (Nx, NextJs, Typescript, Tailwind, Docker, GCP)",
+    //   "Part of the Core Slade360 Team that maintained and deployed the frontend of the Electronic Medical Records system (Javascript, AngularJs, Less, Grunt, Webpack, Ansible, Gitlab) ",
+    //   "Trained and helped with the onboarding of new Frontend hires and interns",
+    // ],
   },
   {
     company: "Takeover Ke",
@@ -59,7 +89,8 @@ export const jobs = [
     leaveDateLong: "",
     location: "Onsite",
     role: "Tech Lead",
-    desc: ["Working with Tony Jerym - Backend Eng, to buil"],
+    desc:[]
+    // desc: ["Working with Tony Jerym - Backend Eng, to buil"],
   },
   // {
   //   company: "Resolution Insurance Ltd",
@@ -223,6 +254,19 @@ export const projects = [
 
     git: "",
     url: "https://web.healthcloud.sh",
+  },
+    {
+    name: "Tripflick Travles",
+    stack: [
+      "Next",
+      "Vercel",
+    ],
+    image: tripflick,
+    about:
+      "This is the official website for Tripflick Travel agency for curated trips and study tours",
+
+    git: "",
+    url: "https://tripflicktravels.com/",
   },
   {
     name: "The Good App",
